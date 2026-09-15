@@ -34,8 +34,10 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [x] Responsive header
 - [x] Premium hero
 - [x] Mobil sabit CTA
-- [ ] Hızlı teklif sistemi
-- [ ] Ana sayfanın kalan blokları
+- [x] Hızlı teklif ön değerlendirme sistemi
+- [x] Ana sayfanın kalan blokları
+- [x] Ana sayfa metadata, schema, robots ve sitemap
+- [ ] Doğrulanmış iletişim/teklif teslimat kanalının bağlanması
 - [ ] Sayfa kümeleri ve içerikler
 - [ ] Nihai domain bağlantısı
 
