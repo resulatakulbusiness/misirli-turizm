@@ -27,7 +27,7 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 ## Mevcut durum
 
 - [x] Next.js proje kurulumu
-- [x] Private GitHub repo
+- [ ] GitHub repo gizliliği: repo şu an `public`; `private` olarak değiştirilmesi gerekiyor
 - [x] Vercel bağlantısı ve ilk preview
 - [x] Marka logosunun işlenmesi
 - [x] Tasarım tokenları
