@@ -31,8 +31,8 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [x] Vercel bağlantısı ve ilk preview
 - [x] Marka logosunun işlenmesi
 - [x] Tasarım tokenları
-- [x] Responsive header
-- [x] Premium hero
+- [x] Açılır hizmet ve hizmet bölgesi menülerine sahip responsive header
+- [x] Üç sahneli, tam ekran ve erişilebilir premium hero slider
 - [x] Mobil sabit CTA
 - [x] Hızlı teklif ön değerlendirme sistemi
 - [x] Ana sayfanın kalan blokları

@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/misirli-turizm-kurumsal-personel-servisi.webp",
-        width: 1200,
-        height: 900,
+        url: "/images/hero-personel-tasimaciligi.webp",
+        width: 1920,
+        height: 1080,
         alt: "Mısırlı Turizm kurumsal personel servis aracı",
       },
     ],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",
     description:
       "Vardiya, personel lokasyonu ve güzergâhı birlikte planlayan kurumsal ulaşım çözüm ortağı.",
-    images: ["/images/misirli-turizm-kurumsal-personel-servisi.webp"],
+    images: ["/images/hero-personel-tasimaciligi.webp"],
   },
 };
 

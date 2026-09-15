@@ -52,7 +52,7 @@ export default function Home() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <SiteHeader />
+      <SiteHeader overlay />
       <main>
         <Hero />
         <HomeSections />

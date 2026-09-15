@@ -32,6 +32,16 @@ Araç veya filo kiralama ayrı bir hizmet değildir ve içerik mimarisine eklenm
 - Görsel dil: gerçek operasyon, personel servisi ve rota/planlama bağlamı.
 - Kullanılmayacak klişeler: piramit, çöl, turistik Mısır ikonografisi.
 
+### Header ve hero standardı
+
+- Ana sayfada hero üzerine yerleşen şeffaf kurumsal header; sayfa kaydırıldığında okunabilir beyaz sabit yüzeye dönüşür.
+- Masaüstü menüsü: Ana Sayfa, Hizmetlerimiz, Hizmet Bölgelerimiz, Kurumsal, Bize Ulaşın ve Hızlı Teklif.
+- Hizmetlerimiz ve Hizmet Bölgelerimiz açılır menüdür; yalnızca yayında olan sayfa ve doğrulanmış bölüm hedeflerine bağlanır.
+- İlk ekran, en fazla üç sahneden oluşan tam ekran slider'dır. Her sahne farklı bir B2B ihtiyeti anlatır; aynı metnin varyasyonu değildir.
+- Slider 7 saniyede ilerler; önceki/sonraki, doğrudan sahne seçimi ve duraklatma kontrolleri bulunur.
+- `prefers-reduced-motion` tercihi otomatik geçişi ve gereksiz animasyonu durdurur.
+- Hero görselleri 16:9, 1920×1080 WebP olarak optimize edilir; başlık okunabilirliği koyu katmanla korunur.
+
 ## Logo kullanımı
 
 Resmî geometrik `MISIRLI TURİZM` kelime markası kullanılır. `MISIRLI` koyu antrasit kalır. Turuncu alt çizgi CTA sistemiyle bağ kurar. `TURİZM` sözcüğü resmî turuncu formunda veya kurumsal mavi varyantta kullanılabilir; marka dışı başka renk kullanılmaz.
@@ -47,8 +57,8 @@ Resmî geometrik `MISIRLI TURİZM` kelime markası kullanılır. `MISIRLI` koyu 
 
 ## Ana sayfa sırası
 
-1. Responsive kurumsal header
-2. Premium hero ve operasyon konumlandırması
+1. Açılır menülü responsive kurumsal header
+2. Tam ekran üç sahneli premium hero slider ve operasyon konumlandırması
 3. Mobil sabit CTA
 4. Hızlı teklif sistemi
 5. Hizmet modeli
@@ -67,3 +77,11 @@ Resmî geometrik `MISIRLI TURİZM` kelime markası kullanılır. `MISIRLI` koyu 
 - Metadata, canonical, görsel boyutları ve alt metinler doğrulanır.
 - Gizli anahtarlar ve `.env` dosyaları repoya eklenmez.
 
+## Yayın öncesi beklenen doğrulanmış veriler
+
+- Ana telefon ve varsa WhatsApp hattı
+- Tekliflerin ulaşacağı kurumsal e-posta adresi
+- Hizmet kapsamındaki ilçe ve/veya bölge sınırları
+- Kullanım izni bulunan gerçek araç, sürücü ve operasyon fotoğrafları
+
+Bu bilgiler gelene kadar iletişim CTA'ları form/teklif bölümüne yönlenir; doğrulanmamış bilgi yayınlanmaz.

@@ -134,14 +134,17 @@ const selectionChecklist = [
 
 const regionalModels = [
   {
+    id: "avrupa-yakasi",
     title: "Avrupa Yakası kümeleri",
     text: "Esenyurt, Beylikdüzü, Avcılar, Küçükçekmece veya çevre bölgelerdeki personel yoğunlukları; tesis yönü ve trafik penceresine göre kümelenebilir.",
   },
   {
+    id: "anadolu-yakasi",
     title: "Anadolu Yakası kümeleri",
     text: "Pendik, Tuzla, Kartal, Sancaktepe veya çevre bölgelerde durak sırası; vardiya saati ve tesis erişimi birlikte düşünülür.",
   },
   {
+    id: "iki-yakali-operasyon",
     title: "İki yakalı operasyon",
     text: "Personel dağılımı iki yakaya uzanıyorsa tek uzun hat yerine aktarmasız ayrı hatlar veya farklı kapasite senaryoları karşılaştırılır.",
   },
@@ -418,7 +421,7 @@ export default function PersonnelTransportationPage() {
             </div>
             <div className={styles.regionalGrid}>
               {regionalModels.map((model) => (
-                <article key={model.title}>
+                <article key={model.title} id={model.id}>
                   <h3>{model.title}</h3>
                   <p>{model.text}</p>
                 </article>
