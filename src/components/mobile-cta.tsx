@@ -21,12 +21,12 @@ function ArrowIcon() {
 export function MobileCta() {
   return (
     <nav className={styles.mobileCta} aria-label="Hızlı işlemler">
-      <a href="#hizmet-yaklasimi">
+      <a href="#hizmet-modeli">
         <RouteIcon />
-        Yaklaşımımız
+        Hizmet Modeli
       </a>
-      <a href="#operasyon-modeli">
-        Planlamayı İncele
+      <a href="#hizli-teklif">
+        Hızlı Teklif
         <ArrowIcon />
       </a>
     </nav>

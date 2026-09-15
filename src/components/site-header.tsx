@@ -3,9 +3,10 @@ import styles from "./landing.module.css";
 
 const navigation = [
   { label: "Ana Sayfa", href: "#personel-tasimaciligi" },
-  { label: "Personel Taşımacılığı", href: "#hizmet-yaklasimi" },
-  { label: "Operasyon Modeli", href: "#operasyon-modeli" },
-  { label: "Kurumsal", href: "#kurumsal-sinyaller" },
+  { label: "Hizmet Modeli", href: "#hizmet-modeli" },
+  { label: "Operasyon", href: "#operasyon-akisi" },
+  { label: "Sektörler", href: "#sektorler" },
+  { label: "Sık Sorulanlar", href: "#sikca-sorulan-sorular" },
 ];
 
 function MenuIcon() {
@@ -38,8 +39,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a className={styles.headerCta} href="#operasyon-modeli">
-          Planlamayı İncele
+        <a className={styles.headerCta} href="#hizli-teklif">
+          Hızlı Teklif
           <ArrowIcon />
         </a>
 
@@ -53,8 +54,8 @@ export function SiteHeader() {
                 {item.label}
               </a>
             ))}
-            <a className={styles.mobileMenuCta} href="#operasyon-modeli">
-              Planlamayı İncele
+            <a className={styles.mobileMenuCta} href="#hizli-teklif">
+              Hızlı Teklif
               <ArrowIcon />
             </a>
           </nav>

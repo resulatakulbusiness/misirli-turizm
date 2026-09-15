@@ -67,12 +67,12 @@ export function Hero() {
             </p>
 
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#operasyon-modeli">
-                Operasyon Modelini İncele
+              <a className={styles.primaryButton} href="#hizli-teklif">
+                Hızlı Ön Değerlendirme
                 <ArrowIcon />
               </a>
-              <a className={styles.secondaryButton} href="#hizmet-yaklasimi">
-                Hizmet Yaklaşımımız
+              <a className={styles.secondaryButton} href="#operasyon-akisi">
+                Operasyon Modelini İncele
               </a>
             </div>
 
@@ -157,7 +157,6 @@ export function Hero() {
             ))}
           </div>
         </div>
-        <span id="kurumsal-sinyaller" className={styles.anchorTarget} />
       </section>
     </>
   );
