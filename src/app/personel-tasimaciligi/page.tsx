@@ -150,6 +150,39 @@ const regionalModels = [
   },
 ];
 
+const serviceClusters = [
+  {
+    label: "Vardiya düzeni",
+    title: "Vardiyalı personel servisi",
+    text: "Gece, gündüz ve çoklu vardiyalarda saat, durak ve araç döngüsünün nasıl planlandığını inceleyin.",
+    href: "/vardiyali-personel-servisi",
+  },
+  {
+    label: "Üretim tesisi",
+    title: "Fabrika personel taşımacılığı",
+    text: "Üretim başlangıcı, OSB trafiği ve tesis giriş koşullarına göre kurulan personel servisi modelini görün.",
+    href: "/fabrika-personel-tasimaciligi",
+  },
+  {
+    label: "Rota ve durak",
+    title: "Kurumsal servis güzergâh planlama",
+    text: "Personel konumlarından güvenli duraklara ve uygulanabilir servis hatlarına uzanan planlama sürecini keşfedin.",
+    href: "/kurumsal-servis-guzergah-planlama",
+  },
+  {
+    label: "Teklif araştırması",
+    title: "Personel servisi fiyatları",
+    text: "Mesafe, vardiya, sefer, durak ve kapasitenin personel servisi teklifini nasıl etkilediğini öğrenin.",
+    href: "/personel-servisi-fiyatlari",
+  },
+  {
+    label: "İstanbul",
+    title: "Personel servisi hizmet bölgeleri",
+    text: "Avrupa ve Anadolu Yakası için bölge kümelerini ve ilçe bazlı içerik mimarisini inceleyin.",
+    href: "/hizmet-bolgeleri",
+  },
+];
+
 const serviceFaqs = [
   {
     question: "Personel taşımacılığı ile yalnızca servis aracı kiralamak arasındaki fark nedir?",
@@ -468,6 +501,31 @@ export default function PersonnelTransportationPage() {
                 <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className={styles.clusterSection} aria-labelledby="cluster-title">
+          <div className={styles.container}>
+            <div className={styles.sectionHeading}>
+              <div>
+                <span className={styles.kicker}>Hizmet rehberi</span>
+                <h2 id="cluster-title">Personel taşımacılığının her kararını ayrı sayfada derinleştirdik.</h2>
+              </div>
+              <p>
+                Ana hizmetten vardiya, fabrika, güzergâh, fiyat ve bölge sayfalarına geçerek
+                ihtiyacınıza en yakın operasyon başlığını ayrıntılı inceleyebilirsiniz.
+              </p>
+            </div>
+            <div className={styles.clusterGrid}>
+              {serviceClusters.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <span>{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <ArrowIcon />
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

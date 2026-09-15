@@ -20,6 +20,29 @@ sayfalarıyla derinleştirmek. İlçe sayfaları yalnızca gerçekten farklı ku
 | Kurumsal | `/kurumsal/` | Firma yaklaşımı ve güven değerlendirmesi | Hizmet sayfalarına güven sinyali verir |
 | Dönüşüm | `/iletisim/` | Doğrulanmış kanaldan görüşme başlatma | Tüm ticari sayfalardan bağlantı alır |
 
+## 15 Eylül 2026 SERP önceliklendirmesi
+
+Hacim aracı erişimi olmadan kesin aylık arama sayısı yazılmaz. Aşağıdaki sıra; canlı SERP'te
+tekrar eden başlıklar, ayrı sayfa üreten rakipler ve ticari arama niyetinin gücüne göre
+belirlenmiştir. Google Keyword Planner ve Search Console bağlandığında gerçek gösterim/tıklama
+verisiyle yeniden sıralanacaktır.
+
+| Öncelik | Ana sorgu | Long-tail destekleri | Sayfa |
+| --- | --- | --- | --- |
+| 1 | **personel taşımacılığı**, **personel servisi** | İstanbul kurumsal personel taşımacılığı, personel taşımacılığı firmaları | `/personel-tasimaciligi` |
+| 2 | **personel servisi fiyatları** | personel taşımacılığı fiyatları, personel servisi fiyat teklifi | `/personel-servisi-fiyatlari` |
+| 3 | **fabrika personel servisi** | fabrika personel taşımacılığı, OSB personel servisi, işçi servisi | `/fabrika-personel-tasimaciligi` |
+| 4 | **vardiyalı personel servisi** | gece vardiyası personel servisi, çoklu vardiya servis planlama | `/vardiyali-personel-servisi` |
+| 5 | **servis güzergâh planlama** | personel servis rotası, durak planlama, rota optimizasyonu | `/kurumsal-servis-guzergah-planlama` |
+| 6 | **İstanbul personel servisi hizmet bölgeleri** | Avrupa Yakası personel servisi, Anadolu Yakası personel servisi | `/hizmet-bolgeleri` |
+
+## İlçe sayfası URL modeli
+
+İlçe sayfaları aşamalı olarak `/hizmet-bolgeleri/{ilce}-personel-servisi` yapısında açılır.
+Her sayfa bölgenin iş/sanayi yapısı, ana ulaşım aksları, vardiya senaryosu, komşu ilçe
+bağlantıları ve hizmet sayfalarına özgün iç linkler içermelidir. İlçe adı değiştirilmiş kopya
+metin yayınlanmaz.
+
 ## İç link kuralları
 
 1. Pillar sayfa tüm yayınlanmış cluster sayfalara bağlanır; yayınlanmamış URL’ye link verilmez.
@@ -27,6 +50,8 @@ sayfalarıyla derinleştirmek. İlçe sayfaları yalnızca gerçekten farklı ku
 3. Ana sayfa, hizmeti özetler; ayrıntılı sorguyu pillar sayfaya yönlendirir.
 4. Teklif niyetli paragraflar `/#hizli-teklif` akışına bağlanır.
 5. Aynı anchor metni her yerde tekrarlanmaz; bağlantı metni cümlenin amacına göre yazılır.
+6. Ana anahtar kelime H1, giriş ve en az bir doğal gövde cümlesinde güçlü vurgu (`strong`) alır;
+   tekrar ve anahtar kelime doldurma yapılmaz.
 
 ## Cannibalization sınırı
 

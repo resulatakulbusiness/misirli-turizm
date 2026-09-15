@@ -19,9 +19,10 @@ export function SiteFooter() {
           <strong>Site haritası</strong>
           <Link href="/">Ana Sayfa</Link>
           <Link href="/personel-tasimaciligi">Personel Taşımacılığı</Link>
-          <Link href="/#hizmet-modeli">Hizmet Modeli</Link>
-          <Link href="/#operasyon-akisi">Operasyon Akışı</Link>
-          <Link href="/#sikca-sorulan-sorular">Sık Sorulanlar</Link>
+          <Link href="/vardiyali-personel-servisi">Vardiyalı Personel Servisi</Link>
+          <Link href="/fabrika-personel-tasimaciligi">Fabrika Personel Servisi</Link>
+          <Link href="/personel-servisi-fiyatlari">Personel Servisi Fiyatları</Link>
+          <Link href="/hizmet-bolgeleri">Hizmet Bölgeleri</Link>
         </nav>
         <div className={styles.footerAction}>
           <strong>Teklif hazırlığı</strong>

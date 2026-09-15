@@ -308,6 +308,7 @@
 .istanbulSection,
 .pricingSection,
 .selectionSection,
+.clusterSection,
 .faqSection {
   padding-block: clamp(78px, 9vw, 122px);
 }
@@ -321,8 +322,68 @@
 
 .planningSection,
 .istanbulSection,
-.selectionSection {
+.selectionSection,
+.clusterSection {
   background: #fff;
+}
+
+.clusterGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.clusterGrid a {
+  position: relative;
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid #dfe5eb;
+  border-radius: 19px;
+  background: var(--color-canvas);
+  transition: transform 190ms ease, border-color 190ms ease, box-shadow 190ms ease;
+}
+
+.clusterGrid a:hover,
+.clusterGrid a:focus-visible {
+  border-color: rgb(23 105 194 / 28%);
+  box-shadow: 0 22px 55px rgb(24 34 44 / 9%);
+  transform: translateY(-4px);
+}
+
+.clusterGrid a > span {
+  color: var(--color-blue);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.clusterGrid h3 {
+  margin: 37px 0 11px;
+  color: var(--color-charcoal);
+  font-size: 21px;
+  letter-spacing: -0.035em;
+  line-height: 1.18;
+}
+
+.clusterGrid p {
+  margin: 0;
+  padding-right: 18px;
+  color: #65727d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.clusterGrid svg {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  width: 18px;
+  fill: none;
+  stroke: var(--color-orange);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .sectionHeading {
@@ -838,6 +899,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .clusterGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .pricingLayout {
     grid-template-columns: 1fr;
   }
@@ -915,6 +980,7 @@
   .istanbulSection,
   .pricingSection,
   .selectionSection,
+  .clusterSection,
   .faqSection {
     padding-block: 72px;
   }
@@ -932,6 +998,7 @@
   }
 
   .scopeGrid,
+  .clusterGrid,
   .scenarioGrid,
   .checklist,
   .factorContent ul {

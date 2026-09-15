@@ -40,7 +40,12 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [ ] Doğrulanmış iletişim/teklif teslimat kanalının bağlanması
 - [x] Pillar / cluster ve iç link mimarisi
 - [x] İstanbul kurumsal personel taşımacılığı pillar sayfası
-- [ ] Destekleyici cluster sayfaları ve içerikleri
+- [x] Vardiyalı personel servisi cluster sayfası
+- [x] Fabrika personel taşımacılığı cluster sayfası
+- [x] Kurumsal servis güzergâh planlama cluster sayfası
+- [x] Personel servisi fiyatları cluster sayfası
+- [x] İstanbul hizmet bölgeleri hub sayfası
+- [ ] İlçe bazlı hizmet bölgesi sayfaları
 - [ ] Nihai domain bağlantısı
 
 ## Yayın kapısı

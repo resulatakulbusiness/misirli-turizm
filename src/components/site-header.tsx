@@ -7,16 +7,17 @@ import styles from "./landing.module.css";
 
 const serviceLinks = [
   { label: "Kurumsal Personel Taşımacılığı", href: "/personel-tasimaciligi" },
-  { label: "Vardiyalı Servis Planlama", href: "/personel-tasimaciligi#nasil-planlanir" },
-  { label: "Fabrika ve Üretim Ulaşımı", href: "/personel-tasimaciligi#kullanim-senaryolari" },
-  { label: "Güzergâh ve Durak Planlama", href: "/personel-tasimaciligi#hizmet-kapsami" },
+  { label: "Vardiyalı Personel Servisi", href: "/vardiyali-personel-servisi" },
+  { label: "Fabrika Personel Taşımacılığı", href: "/fabrika-personel-tasimaciligi" },
+  { label: "Güzergâh ve Durak Planlama", href: "/kurumsal-servis-guzergah-planlama" },
+  { label: "Personel Servisi Fiyatları", href: "/personel-servisi-fiyatlari" },
 ];
 
 const regionLinks = [
-  { label: "İstanbul Operasyon Yaklaşımı", href: "/personel-tasimaciligi#istanbul-title" },
-  { label: "Avrupa Yakası Hat Kurgusu", href: "/personel-tasimaciligi#avrupa-yakasi" },
-  { label: "Anadolu Yakası Hat Kurgusu", href: "/personel-tasimaciligi#anadolu-yakasi" },
-  { label: "İki Yakalı Operasyon", href: "/personel-tasimaciligi#iki-yakali-operasyon" },
+  { label: "İstanbul Hizmet Bölgeleri", href: "/hizmet-bolgeleri" },
+  { label: "Avrupa Yakası Planlama Bölgeleri", href: "/hizmet-bolgeleri#avrupa-yakasi" },
+  { label: "Anadolu Yakası Planlama Bölgeleri", href: "/hizmet-bolgeleri#anadolu-yakasi" },
+  { label: "İlçe Bazlı Hizmet Yapısı", href: "/hizmet-bolgeleri#ilce-yapisi" },
 ];
 
 function MenuIcon() {

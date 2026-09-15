@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
+import factoryImage from "../../public/images/hero-vardiyali-fabrika-servisi.webp";
+import officeImage from "../../public/images/hero-kurumsal-ofis-servisi.webp";
+import personnelImage from "../../public/images/hero-personel-tasimaciligi.webp";
 import { QuotePlanner } from "./quote-planner";
 import { SiteFooter } from "./site-footer";
 import styles from "./sections.module.css";
@@ -70,6 +75,33 @@ const useCases = [
     title: "Gece–gündüz vardiya koordinasyonu",
     text: "Gün içi değişen ekipler için toplanma noktalarını ve servis saatlerini vardiya düzenine bağlayan kontrollü model.",
     code: "7/24 OPERASYON",
+  },
+];
+
+const servicePages = [
+  {
+    label: "Vardiya operasyonu",
+    title: "Vardiyalı personel servisi",
+    text: "Gece, gündüz ve çoklu vardiyalara göre ayrı saat, durak ve kapasite planı.",
+    href: "/vardiyali-personel-servisi",
+    image: factoryImage,
+    alt: "Vardiyalı personel servisine binen fabrika çalışanları",
+  },
+  {
+    label: "Üretim ve sanayi",
+    title: "Fabrika personel taşımacılığı",
+    text: "Üretim başlangıcını ve tesis giriş koşullarını destekleyen servis organizasyonu.",
+    href: "/fabrika-personel-tasimaciligi",
+    image: personnelImage,
+    alt: "Fabrika personel taşımacılığında kullanılan Mısırlı Turizm servis aracı",
+  },
+  {
+    label: "Rota ve durak",
+    title: "Kurumsal güzergâh planlama",
+    text: "Personel konumlarından güvenli duraklara ve uygulanabilir servis hatlarına.",
+    href: "/kurumsal-servis-guzergah-planlama",
+    image: officeImage,
+    alt: "İstanbul iş merkezine giden kurumsal personel servis araçları",
   },
 ];
 
@@ -227,6 +259,39 @@ export function HomeSections() {
                 </ul>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.serviceShowcase} aria-labelledby="service-pages-title">
+        <div className={styles.container}>
+          <div className={`${styles.sectionHeading} ${styles.sectionHeadingCompact}`}>
+            <div>
+              <span className={styles.kicker}>Hizmetlerimiz</span>
+              <h2 id="service-pages-title">Her operasyon ihtiyacı için ayrı uzmanlık sayfası.</h2>
+            </div>
+            <p>
+              Vardiya, tesis ve güzergâh kararlarını tek bir genel metinde bırakmıyoruz;
+              ihtiyacınıza uygun hizmet sayfasında ayrıntılı ve bağlantılı biçimde açıklıyoruz.
+            </p>
+          </div>
+          <div className={styles.serviceShowcaseGrid}>
+            {servicePages.map((item) => (
+              <Link key={item.href} href={item.href}>
+                <Image src={item.image} alt={item.alt} sizes="(max-width: 680px) 92vw, (max-width: 960px) 46vw, 31vw" />
+                <div className={styles.showcaseShade} aria-hidden="true" />
+                <div className={styles.showcaseCopy}>
+                  <span>{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <strong>Detaylı incele <ArrowIcon /></strong>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className={styles.serviceShowcaseLinks}>
+            <Link href="/personel-servisi-fiyatlari">Personel servisi fiyatlarını belirleyenler <ArrowIcon /></Link>
+            <Link href="/hizmet-bolgeleri">İstanbul hizmet bölgelerini inceleyin <ArrowIcon /></Link>
           </div>
         </div>
       </section>

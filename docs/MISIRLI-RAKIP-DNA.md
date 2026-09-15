@@ -20,6 +20,9 @@ Ana arama niyeti: İstanbul kurumsal personel taşımacılığı, personel servi
 - Fabrika, sanayi, depo, ofis ve vardiyalı işletme senaryoları
 - Yetki belgeleri, bakım, sürücü kontrolleri ve yedekleme gibi güven başlıkları
 - Fiyatın mesafe, vardiya, durak, kapasite ve çalışma günüyle belirlendiğini açıklayan SSS
+- Hizmetlerin fabrika personel servisi, vardiyalı servis, fiyat ve güzergâh niyetlerine göre
+  ayrı URL'lerle derinleştirilmesi
+- İlçe ve sanayi bölgesi sorgularında yerel trafik, ana arter ve tesis yönü bilgisinin kullanılması
 
 ## Mısırlı Turizm ayrışma kararı
 
@@ -44,5 +47,9 @@ Ana sayfada bu karar şu bileşenlerle uygulanır:
 - https://www.ozata.com.tr/
 - https://www.ntniksarturizm.com/istanbul-personel-tasimaciligi.html
 - https://kaplanturizm.com/istanbul-personel-tasimaciligi/
+- https://www.personelservisi.com/
+- https://www.ozyuce.com/
+- https://guldemirturizm.com.tr/personel-servis-tasimaciligi/
+- https://www.bastugturizm.com/personel-servis-guzergahi-nasil-belirlenir/
 
 Bu belge canlı SERP görünümünün tarihli özetidir. Yeni sayfa kümeleri planlanmadan önce sonuçlar yeniden kontrol edilir.
