@@ -1,0 +1,49 @@
+# Mısırlı Turizm — Üretim Akışı
+
+```mermaid
+flowchart TD
+    A["Proje kimliğini doğrula"] --> B["SERP ve rakip DNA"]
+    B --> C["Site ve içerik DNA"]
+    C --> D["Tasarım sistemi"]
+    D --> E["Header + hero + mobil CTA"]
+    E --> F["Hızlı teklif sistemi"]
+    F --> G["Ana sayfa blokları"]
+    G --> H["SEO, GEO ve schema"]
+    H --> I["Mobil, teknik ve içerik QA"]
+    I --> J["Commit ve push"]
+    J --> K["Vercel deployment doğrulama"]
+```
+
+## Her geliştirme öncesi kapı
+
+1. Aktif proje `misirli-turizm` mi?
+2. Hedef domain `misirliturizm.com` mu?
+3. İstenen özellik kurumsal müşteri kazanım sitesine mi ait?
+4. Panel yazılımı veya başka marka verisi yanlışlıkla kapsamda mı?
+5. Kullanılan marka ve iletişim verileri doğrulanmış mı?
+
+Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
+
+## Mevcut durum
+
+- [x] Next.js proje kurulumu
+- [x] Private GitHub repo
+- [x] Vercel bağlantısı ve ilk preview
+- [x] Marka logosunun işlenmesi
+- [x] Tasarım tokenları
+- [x] Responsive header
+- [x] Premium hero
+- [x] Mobil sabit CTA
+- [ ] Hızlı teklif sistemi
+- [ ] Ana sayfanın kalan blokları
+- [ ] Sayfa kümeleri ve içerikler
+- [ ] Nihai domain bağlantısı
+
+## Yayın kapısı
+
+- Proje ve domain tekrar doğrulanır.
+- `npm run lint` ve `npm run build` geçer.
+- Masaüstü ve mobil görünüm kontrol edilir.
+- İç linkler ve CTA hedefleri çalışır.
+- Metadata, canonical, schema ve indeksleme kararları incelenir.
+- Commit açıklayıcıdır; push sonrası Vercel sonucu ve preview URL doğrulanır.
