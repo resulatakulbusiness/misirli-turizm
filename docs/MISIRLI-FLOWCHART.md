@@ -38,7 +38,9 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [x] Ana sayfanın kalan blokları
 - [x] Ana sayfa metadata, schema, robots ve sitemap
 - [ ] Doğrulanmış iletişim/teklif teslimat kanalının bağlanması
-- [ ] Sayfa kümeleri ve içerikler
+- [x] Pillar / cluster ve iç link mimarisi
+- [x] İstanbul kurumsal personel taşımacılığı pillar sayfası
+- [ ] Destekleyici cluster sayfaları ve içerikleri
 - [ ] Nihai domain bağlantısı
 
 ## Yayın kapısı

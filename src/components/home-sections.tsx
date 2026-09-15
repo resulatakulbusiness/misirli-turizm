@@ -1,5 +1,5 @@
-import { BrandMark } from "./brand-mark";
 import { QuotePlanner } from "./quote-planner";
+import { SiteFooter } from "./site-footer";
 import styles from "./sections.module.css";
 
 const serviceModel = [
@@ -369,35 +369,7 @@ export function HomeSections() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <div className={`${styles.container} ${styles.footerGrid}`}>
-          <div className={styles.footerBrand}>
-            <span className={styles.footerLogo}>
-              <BrandMark />
-            </span>
-            <p>
-              İstanbul’daki işletmeler için personel lokasyonu, vardiya ve güzergâhı birlikte
-              planlayan kurumsal ulaşım çözüm ortağı.
-            </p>
-          </div>
-          <nav aria-label="Alt menü">
-            <strong>Site haritası</strong>
-            <a href="#personel-tasimaciligi">Ana Sayfa</a>
-            <a href="#hizmet-modeli">Hizmet Modeli</a>
-            <a href="#operasyon-akisi">Operasyon Akışı</a>
-            <a href="#sikca-sorulan-sorular">Sık Sorulanlar</a>
-          </nav>
-          <div className={styles.footerAction}>
-            <strong>Teklif hazırlığı</strong>
-            <p>Personel sayısı ve vardiya yapınızı paylaşarak ilk değerlendirmeyi oluşturun.</p>
-            <a href="#hizli-teklif">Hızlı teklif sistemi</a>
-          </div>
-        </div>
-        <div className={`${styles.container} ${styles.footerBottom}`}>
-          <span>© {new Date().getFullYear()} Mısırlı Turizm</span>
-          <span>Kurumsal personel taşımacılığı · İstanbul</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

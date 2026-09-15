@@ -10,12 +10,12 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://misirliturizm.com"),
-  title: "İstanbul Kurumsal Personel Taşımacılığı | Mısırlı Turizm",
+  title: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",
   description:
     "İstanbul’da personel lokasyonu, vardiya ve güzergâh planlamasını birlikte yöneten Mısırlı Turizm ile kurumsal ulaşım operasyonunuzu planlayın.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "İstanbul Kurumsal Personel Taşımacılığı | Mısırlı Turizm",
+    title: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",
     description:
       "Personel lokasyonu, vardiya ve güzergâh planlamasını tek operasyon modelinde buluşturan B2B ulaşım çözümü.",
     url: "/",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "İstanbul Kurumsal Personel Taşımacılığı | Mısırlı Turizm",
+    title: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",
     description:
       "Vardiya, personel lokasyonu ve güzergâhı birlikte planlayan kurumsal ulaşım çözüm ortağı.",
     images: ["/images/misirli-turizm-kurumsal-personel-servisi.webp"],

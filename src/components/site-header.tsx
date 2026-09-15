@@ -1,12 +1,13 @@
+import Link from "next/link";
 import { BrandMark } from "./brand-mark";
 import styles from "./landing.module.css";
 
 const navigation = [
-  { label: "Ana Sayfa", href: "#personel-tasimaciligi" },
-  { label: "Hizmet Modeli", href: "#hizmet-modeli" },
-  { label: "Operasyon", href: "#operasyon-akisi" },
-  { label: "Sektörler", href: "#sektorler" },
-  { label: "Sık Sorulanlar", href: "#sikca-sorulan-sorular" },
+  { label: "Ana Sayfa", href: "/" },
+  { label: "Personel Taşımacılığı", href: "/personel-tasimaciligi" },
+  { label: "Hizmet Modeli", href: "/#hizmet-modeli" },
+  { label: "Operasyon", href: "/#operasyon-akisi" },
+  { label: "Sektörler", href: "/#sektorler" },
 ];
 
 function MenuIcon() {
@@ -33,16 +34,16 @@ export function SiteHeader() {
 
         <nav className={styles.desktopNav} aria-label="Ana menü">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href}>
+            <Link key={item.href} href={item.href}>
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <a className={styles.headerCta} href="#hizli-teklif">
+        <Link className={styles.headerCta} href="/#hizli-teklif">
           Hızlı Teklif
           <ArrowIcon />
-        </a>
+        </Link>
 
         <details className={styles.mobileMenu}>
           <summary aria-label="Menüyü aç">
@@ -50,14 +51,14 @@ export function SiteHeader() {
           </summary>
           <nav aria-label="Mobil menü">
             {navigation.map((item) => (
-              <a key={item.href} href={item.href}>
+              <Link key={item.href} href={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a className={styles.mobileMenuCta} href="#hizli-teklif">
+            <Link className={styles.mobileMenuCta} href="/#hizli-teklif">
               Hızlı Teklif
               <ArrowIcon />
-            </a>
+            </Link>
           </nav>
         </details>
       </div>

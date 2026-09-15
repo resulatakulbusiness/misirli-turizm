@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./landing.module.css";
 
 function RouteIcon() {
@@ -21,14 +22,14 @@ function ArrowIcon() {
 export function MobileCta() {
   return (
     <nav className={styles.mobileCta} aria-label="Hızlı işlemler">
-      <a href="#hizmet-modeli">
+      <Link href="/#hizmet-modeli">
         <RouteIcon />
         Hizmet Modeli
-      </a>
-      <a href="#hizli-teklif">
+      </Link>
+      <Link href="/#hizli-teklif">
         Hızlı Teklif
         <ArrowIcon />
-      </a>
+      </Link>
     </nav>
   );
 }
