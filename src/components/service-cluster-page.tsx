@@ -1,6 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { siteContact } from "@/lib/site-contact";
 import { MobileCta } from "./mobile-cta";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -114,6 +115,8 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
           "@id": "https://misirliturizm.com/#organization",
           name: "Mısırlı Turizm",
           url: "https://misirliturizm.com/",
+          telephone: siteContact.phoneE164,
+          email: siteContact.email,
         },
         areaServed: { "@type": "City", name: "İstanbul" },
         audience: { "@type": "BusinessAudience", audienceType: "İşletmeler" },

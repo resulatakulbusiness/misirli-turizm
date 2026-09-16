@@ -77,11 +77,16 @@ Resmî geometrik `MISIRLI TURİZM` kelime markası kullanılır. `MISIRLI` koyu 
 - Metadata, canonical, görsel boyutları ve alt metinler doğrulanır.
 - Gizli anahtarlar ve `.env` dosyaları repoya eklenmez.
 
-## Yayın öncesi beklenen doğrulanmış veriler
+## Doğrulanmış iletişim verileri
 
-- Ana telefon ve varsa WhatsApp hattı
-- Tekliflerin ulaşacağı kurumsal e-posta adresi
+- Telefon ve WhatsApp: `0537 565 19 35` (`+90 537 565 19 35`)
+- Kurumsal e-posta: `info@misirliturizm.com`
+
+Telefon, WhatsApp, e-posta bağlantıları ve Organization/ContactPoint schema verisi tek merkezli `src/lib/site-contact.ts` dosyasından yönetilir. Mobil sabit CTA her sayfada doğrudan arama ve WhatsApp işlemi sunar. E-posta hesabı fiziksel olarak açılana kadar gelen e-postalar teslim alınamayacağı için hesap yayından sonra ayrıca etkinleştirilmelidir.
+
+## Yayın öncesi beklenen diğer veriler
+
 - Hizmet kapsamındaki ilçe ve/veya bölge sınırları
 - Kullanım izni bulunan gerçek araç, sürücü ve operasyon fotoğrafları
 
-Bu bilgiler gelene kadar iletişim CTA'ları form/teklif bölümüne yönlenir; doğrulanmamış bilgi yayınlanmaz.
+Doğrulanmamış bilgi yayınlanmaz. Her hizmet ve ilçe sayfası ayrı arama niyeti, özgün metin, metadata, schema ve bağlamsal iç linklerle hazırlanır; kopya lokasyon varyasyonları kullanılmaz.

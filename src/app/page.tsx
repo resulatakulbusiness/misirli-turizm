@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero";
 import { HomeSections, faqs } from "@/components/home-sections";
 import { MobileCta } from "@/components/mobile-cta";
 import { SiteHeader } from "@/components/site-header";
+import { siteContact } from "@/lib/site-contact";
 
 export default function Home() {
   const jsonLd = {
@@ -13,6 +14,15 @@ export default function Home() {
         name: "Mısırlı Turizm",
         url: "https://misirliturizm.com/",
         logo: "https://misirliturizm.com/brand/misirli-turizm-logo.png",
+        telephone: siteContact.phoneE164,
+        email: siteContact.email,
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: siteContact.phoneE164,
+          contactType: "customer service",
+          availableLanguage: "Turkish",
+          areaServed: "TR",
+        },
         description:
           "İstanbul'daki işletmeler için personel lokasyonu, vardiya ve güzergâh planlamasını birlikte ele alan kurumsal ulaşım çözüm ortağı.",
       },

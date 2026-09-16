@@ -37,7 +37,9 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [x] Hızlı teklif ön değerlendirme sistemi
 - [x] Ana sayfanın kalan blokları
 - [x] Ana sayfa metadata, schema, robots ve sitemap
-- [ ] Doğrulanmış iletişim/teklif teslimat kanalının bağlanması
+- [x] Doğrulanmış telefon, WhatsApp ve e-posta bilgilerinin bağlanması
+- [x] SEO uyumlu iletişim sayfası
+- [x] Hızlı teklif özetinin WhatsApp teslimatına bağlanması
 - [x] Pillar / cluster ve iç link mimarisi
 - [x] İstanbul kurumsal personel taşımacılığı pillar sayfası
 - [x] Vardiyalı personel servisi cluster sayfası

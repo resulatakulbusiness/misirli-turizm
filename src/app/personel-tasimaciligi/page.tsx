@@ -5,6 +5,7 @@ import serviceImage from "../../../public/images/misirli-turizm-kurumsal-persone
 import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./service.module.css";
 
 export const metadata: Metadata = {
@@ -275,6 +276,8 @@ export default function PersonnelTransportationPage() {
           "@id": "https://misirliturizm.com/#organization",
           name: "Mısırlı Turizm",
           url: "https://misirliturizm.com/",
+          telephone: siteContact.phoneE164,
+          email: siteContact.email,
         },
         areaServed: { "@type": "City", name: "İstanbul" },
         audience: { "@type": "BusinessAudience", audienceType: "İşletmeler" },

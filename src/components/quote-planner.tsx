@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./sections.module.css";
 
 type QuoteData = {
@@ -71,6 +72,22 @@ export function QuotePlanner() {
     setStep(1);
   };
 
+  const whatsappSummary = [
+    "Merhaba Mısırlı Turizm, kurumsal personel taşımacılığı için ön değerlendirme paylaşmak istiyorum.",
+    "",
+    `Firma: ${quote.company}`,
+    `Yetkili: ${quote.contact}`,
+    `Telefon: ${quote.phone}`,
+    `E-posta: ${quote.email}`,
+    `Personel: ${quote.staffRange} kişi`,
+    `Vardiya: ${quote.shiftModel}`,
+    `Hizmet bölgesi: ${quote.serviceArea}`,
+    `Öncelik: ${quote.priority}`,
+    quote.note ? `Ek bilgi: ${quote.note}` : "",
+  ].filter(Boolean).join("\n");
+
+  const quoteWhatsappHref = `https://wa.me/${siteContact.whatsappNumber}?text=${encodeURIComponent(whatsappSummary)}`;
+
   if (isPrepared) {
     return (
       <div className={styles.quoteResult} aria-live="polite">
@@ -98,8 +115,17 @@ export function QuotePlanner() {
           </div>
         </dl>
         <p className={styles.resultNote}>
-          Bu özet tarayıcınızda oluşturuldu. Doğrulanmış iletişim kanalı bağlanana kadar
+          Bu özet yalnızca tarayıcınızda oluşturuldu. WhatsApp düğmesine basana kadar
           kişisel bilgileriniz hiçbir yere gönderilmez.
+        </p>
+        <div className={styles.resultActions}>
+          <a href={quoteWhatsappHref} target="_blank" rel="noopener noreferrer">
+            WhatsApp&apos;tan gönder <ArrowIcon />
+          </a>
+          <a href={siteContact.phoneHref}>Hemen ara: {siteContact.phoneDisplay}</a>
+        </div>
+        <p className={styles.resultEmail}>
+          E-posta: <a href={siteContact.emailHref}>{siteContact.email}</a>
         </p>
         <button type="button" className={styles.outlineButton} onClick={restart}>
           Bilgileri düzenle

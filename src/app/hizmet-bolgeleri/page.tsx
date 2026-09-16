@@ -7,6 +7,7 @@ import personnelImage from "../../../public/images/hero-personel-tasimaciligi.we
 import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./regions.module.css";
 
 export const metadata: Metadata = {
@@ -156,7 +157,13 @@ export default function ServiceRegionsPage() {
         name: "İstanbul Personel Servisi Hizmet Bölgeleri",
         serviceType: "İstanbul kurumsal personel servisi bölge ve güzergâh planlama",
         url: canonical,
-        provider: { "@type": "Organization", "@id": "https://misirliturizm.com/#organization", name: "Mısırlı Turizm" },
+        provider: {
+          "@type": "Organization",
+          "@id": "https://misirliturizm.com/#organization",
+          name: "Mısırlı Turizm",
+          telephone: siteContact.phoneE164,
+          email: siteContact.email,
+        },
         areaServed: { "@type": "City", name: "İstanbul" },
         description: "Avrupa ve Anadolu Yakası için personel dağılımı, tesis yönü, vardiya, durak ve güzergâh odaklı kurumsal servis planlama yaklaşımı.",
       },

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteContact } from "@/lib/site-contact";
 import { BrandMark } from "./brand-mark";
 import styles from "./sections.module.css";
 
@@ -23,11 +24,17 @@ export function SiteFooter() {
           <Link href="/fabrika-personel-tasimaciligi">Fabrika Personel Servisi</Link>
           <Link href="/personel-servisi-fiyatlari">Personel Servisi Fiyatları</Link>
           <Link href="/hizmet-bolgeleri">Hizmet Bölgeleri</Link>
+          <Link href="/iletisim">Bize Ulaşın</Link>
         </nav>
         <div className={styles.footerAction}>
-          <strong>Teklif hazırlığı</strong>
-          <p>Personel sayısı ve vardiya yapınızı paylaşarak ilk değerlendirmeyi oluşturun.</p>
-          <Link href="/#hizli-teklif">Hızlı teklif sistemi</Link>
+          <strong>Doğrudan iletişim</strong>
+          <p>Personel sayısı, vardiya yapısı ve hizmet bölgenizi paylaşarak ilk değerlendirmeyi başlatın.</p>
+          <div className={styles.footerContacts}>
+            <a href={siteContact.phoneHref}>Ara: {siteContact.phoneDisplay}</a>
+            <a href={siteContact.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp&apos;tan yazın</a>
+            <a href={siteContact.emailHref}>{siteContact.email}</a>
+          </div>
+          <Link href="/#hizli-teklif">Hızlı teklif formu</Link>
         </div>
       </div>
       <div className={`${styles.container} ${styles.footerBottom}`}>

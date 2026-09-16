@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { siteContact } from "@/lib/site-contact";
 import { BrandMark } from "./brand-mark";
 import styles from "./landing.module.css";
 
@@ -99,12 +100,12 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           <DesktopDropdown label="Hizmetlerimiz" links={serviceLinks} />
           <DesktopDropdown label="Hizmet Bölgelerimiz" links={regionLinks} />
           <Link className={styles.navLink} href="/#kurumsal-sinyaller">Kurumsal</Link>
-          <Link className={styles.navLink} href="/#hizli-teklif">Bize Ulaşın</Link>
+          <Link className={styles.navLink} href="/iletisim">Bize Ulaşın</Link>
         </nav>
 
-        <Link className={styles.headerCta} href="/#hizli-teklif">
-          Hızlı Teklif <ArrowIcon />
-        </Link>
+        <a className={styles.headerCta} href={siteContact.phoneHref}>
+          Hemen Ara <ArrowIcon />
+        </a>
 
         <details className={styles.mobileMenu}>
           <summary aria-label="Menüyü aç"><MenuIcon /></summary>
@@ -113,10 +114,18 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
             <MobileDropdown label="Hizmetlerimiz" links={serviceLinks} />
             <MobileDropdown label="Hizmet Bölgelerimiz" links={regionLinks} />
             <Link className={styles.mobileTopLink} href="/#kurumsal-sinyaller">Kurumsal</Link>
-            <Link className={styles.mobileTopLink} href="/#hizli-teklif">Bize Ulaşın</Link>
-            <Link className={styles.mobileMenuCta} href="/#hizli-teklif">
-              Hızlı Teklif <ArrowIcon />
-            </Link>
+            <Link className={styles.mobileTopLink} href="/iletisim">Bize Ulaşın</Link>
+            <a className={styles.mobileContactLink} href={siteContact.phoneHref}>
+              Hemen Ara · {siteContact.phoneDisplay}
+            </a>
+            <a
+              className={styles.mobileMenuCta}
+              href={siteContact.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp&apos;tan yazın <ArrowIcon />
+            </a>
           </nav>
         </details>
       </div>
