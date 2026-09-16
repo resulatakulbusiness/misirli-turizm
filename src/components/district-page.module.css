@@ -1,0 +1,1065 @@
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 84% 12%, rgb(45 140 255 / 17%), transparent 28%),
+    linear-gradient(142deg, #101b25, #1c2d3b);
+  color: #fff;
+}
+
+.heroPattern {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: linear-gradient(90deg, #000, rgb(0 0 0 / 46%) 66%, transparent);
+}
+
+.heroLayout {
+  display: grid;
+  min-height: 720px;
+  grid-template-columns: minmax(0, 0.98fr) minmax(430px, 1.02fr);
+  gap: clamp(54px, 7vw, 96px);
+  align-items: center;
+  padding-block: 78px 92px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 42px;
+  color: #98a9b8;
+  font-size: 9px;
+  font-weight: 720;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: #fff;
+}
+
+.eyebrow,
+.sectionHeading > div:first-child > span,
+.strategyCopy > span,
+.processIntro > span,
+.pricingLayout > div:first-child > span,
+.relatedHeading > span,
+.faqIntro > span,
+.finalCta span {
+  color: #81baf7;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 14px 0 0;
+  font-size: clamp(46px, 5.2vw, 73px);
+  font-weight: 790;
+  letter-spacing: -0.062em;
+  line-height: 0.99;
+  text-wrap: balance;
+}
+
+.hero h1 span {
+  display: block;
+  color: #7db8f7;
+}
+
+.heroSummary {
+  max-width: 670px;
+  margin-top: 27px;
+  color: #c4d0da;
+  font-size: 15px;
+  line-height: 1.76;
+}
+
+.heroSummary p {
+  margin: 0;
+}
+
+.heroSummary strong {
+  color: #fff;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  min-height: 53px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding-inline: 20px;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 850;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.primaryButton {
+  background: var(--color-orange);
+  box-shadow: 0 14px 30px rgb(244 122 0 / 22%);
+}
+
+.secondaryButton {
+  border: 1px solid rgb(255 255 255 / 22%);
+  background: rgb(255 255 255 / 6%);
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible,
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  transform: translateY(-2px);
+}
+
+.primaryButton svg,
+.contextRail a svg,
+.processIntro a svg,
+.pricingLayout a svg,
+.relatedGrid svg,
+.finalCta a svg {
+  width: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.keywordList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 25px;
+}
+
+.keywordList strong {
+  padding: 7px 10px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 5%);
+  color: #c4d0da;
+  font-size: 9px;
+}
+
+.heroVisual {
+  position: relative;
+  margin: 0;
+  padding-bottom: 62px;
+}
+
+.heroVisual > img {
+  display: block;
+  width: 100%;
+  min-height: 515px;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 27px;
+  object-fit: cover;
+  box-shadow: 0 32px 85px rgb(0 0 0 / 31%);
+}
+
+.heroVisual::after {
+  position: absolute;
+  inset: 0 0 62px;
+  border-radius: 27px;
+  background: linear-gradient(180deg, transparent 50%, rgb(7 14 21 / 62%));
+  content: "";
+  pointer-events: none;
+}
+
+.heroVisual figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 20px;
+  display: grid;
+  width: min(390px, calc(100% - 48px));
+  gap: 7px;
+  padding: 21px 24px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 17px 45px rgb(7 15 22 / 26%);
+  color: var(--color-charcoal);
+}
+
+.heroVisual figcaption span {
+  color: var(--color-blue);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroVisual figcaption strong {
+  font-size: 13px;
+}
+
+.routeBadge {
+  position: absolute;
+  z-index: 2;
+  bottom: 100px;
+  left: 22px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 13px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 12px;
+  background: rgb(11 21 30 / 73%);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.routeBadge i {
+  width: 22px;
+  height: 1px;
+  background: var(--color-orange);
+}
+
+.contextRail {
+  padding-block: 52px;
+  background: #fff;
+}
+
+.contextLayout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(44px, 7vw, 90px);
+  align-items: center;
+}
+
+.contextLayout > div > span {
+  color: var(--color-orange);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.contextLayout h2 {
+  margin: 11px 0 0;
+  color: var(--color-charcoal);
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+
+.contextLayout > div > div {
+  margin-top: 14px;
+  color: #687580;
+  font-size: 12px;
+  line-height: 1.72;
+}
+
+.contextLayout p {
+  margin: 0;
+}
+
+.contextLayout a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: var(--color-blue);
+  font-size: 10px;
+  font-weight: 820;
+}
+
+.contextLayout dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid #e0e6eb;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.contextLayout dl > div {
+  min-height: 145px;
+  padding: 26px;
+  border-right: 1px solid #e0e6eb;
+}
+
+.contextLayout dl > div:last-child {
+  border-right: 0;
+}
+
+.contextLayout dt {
+  color: var(--color-charcoal);
+  font-size: clamp(25px, 3vw, 37px);
+  font-weight: 790;
+  letter-spacing: -0.05em;
+}
+
+.contextLayout dd {
+  margin: 13px 0 0;
+  color: #71808c;
+  font-size: 10px;
+  font-weight: 720;
+  line-height: 1.5;
+}
+
+.planningSection,
+.zoneSection,
+.strategySection,
+.processSection,
+.pricingSection,
+.relatedSection,
+.faqSection {
+  padding-block: clamp(78px, 9vw, 124px);
+}
+
+.planningSection,
+.processSection,
+.faqSection {
+  background: var(--color-canvas);
+}
+
+.zoneSection,
+.strategySection,
+.relatedSection {
+  background: #fff;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(320px, 0.72fr);
+  gap: clamp(43px, 7vw, 96px);
+  align-items: end;
+  margin-bottom: 43px;
+}
+
+.sectionHeading h2,
+.strategyCopy h2,
+.processIntro h2,
+.pricingLayout h2,
+.relatedHeading h2,
+.faqIntro h2,
+.finalCta h2 {
+  margin: 12px 0 0;
+  color: var(--color-charcoal);
+  font-size: clamp(34px, 4.15vw, 53px);
+  font-weight: 780;
+  letter-spacing: -0.052em;
+  line-height: 1.07;
+  text-wrap: balance;
+}
+
+.sectionHeading > div:last-child,
+.strategyCopy > div,
+.processIntro > div,
+.pricingLayout > div:first-child > div,
+.faqIntro p {
+  color: #64717c;
+  font-size: 14px;
+  line-height: 1.76;
+}
+
+.sectionHeading p,
+.strategyCopy p,
+.processIntro p,
+.pricingLayout p {
+  margin: 0;
+}
+
+.sectionHeading strong,
+.strategyCopy strong,
+.processIntro strong,
+.pricingLayout strong {
+  color: var(--color-charcoal);
+}
+
+.planningGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  border: 1px solid #dfe6ec;
+  border-radius: 23px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.planningGrid article {
+  min-height: 310px;
+  padding: 34px;
+  border-right: 1px solid #e3e8ed;
+}
+
+.planningGrid article:last-child {
+  border-right: 0;
+}
+
+.planningGrid article > span {
+  color: var(--color-orange);
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.planningGrid h3,
+.zoneGrid h3,
+.processLayout h3,
+.relatedGrid h3 {
+  color: var(--color-charcoal);
+  letter-spacing: -0.035em;
+}
+
+.planningGrid h3 {
+  margin: 52px 0 14px;
+  font-size: 23px;
+}
+
+.planningGrid article > div,
+.zoneGrid article > div,
+.processLayout li > div > div {
+  color: #66737e;
+  font-size: 12px;
+  line-height: 1.73;
+}
+
+.planningGrid p,
+.zoneGrid p,
+.processLayout li p {
+  margin: 0;
+}
+
+.zoneGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.zoneGrid article {
+  min-height: 315px;
+  padding: 29px;
+  border: 1px solid #dfe6ec;
+  border-radius: 19px;
+  background: #f8fafc;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.zoneGrid article:hover {
+  border-color: rgb(23 105 194 / 28%);
+  box-shadow: 0 21px 50px rgb(24 34 44 / 8%);
+  transform: translateY(-3px);
+}
+
+.zoneGrid article > span {
+  color: var(--color-blue);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.zoneGrid h3 {
+  margin: 28px 0 13px;
+  font-size: 21px;
+}
+
+.zoneGrid ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zoneGrid li {
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #eaf3fc;
+  color: var(--color-blue);
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.strategyLayout {
+  display: grid;
+  grid-template-columns: minmax(390px, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(50px, 8vw, 108px);
+  align-items: center;
+}
+
+.strategyVisual {
+  position: relative;
+  min-height: 520px;
+}
+
+.strategyVisual > img {
+  width: 100%;
+  height: 520px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 30px 75px rgb(24 34 44 / 17%);
+}
+
+.strategyVisual > div {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 15px;
+  background: rgb(14 25 35 / 76%);
+  backdrop-filter: blur(13px);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.strategyVisual i {
+  width: 47px;
+  height: 2px;
+  background: var(--color-orange);
+}
+
+.strategyCopy > div {
+  margin-top: 22px;
+}
+
+.strategyCopy ul {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.strategyCopy li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #46535f;
+  font-size: 12px;
+  font-weight: 730;
+  line-height: 1.55;
+}
+
+.strategyCopy li svg {
+  width: 17px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--color-orange);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+}
+
+.processLayout,
+.pricingLayout,
+.faqLayout {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.63fr) minmax(0, 1.37fr);
+  gap: clamp(48px, 8vw, 108px);
+  align-items: start;
+}
+
+.processIntro,
+.faqIntro {
+  position: sticky;
+  top: 116px;
+}
+
+.processIntro > div,
+.pricingLayout > div:first-child > div,
+.faqIntro p {
+  margin-top: 20px;
+}
+
+.processIntro a,
+.pricingLayout a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-orange);
+  color: var(--color-charcoal);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.processLayout ol {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dce3e9;
+  list-style: none;
+}
+
+.processLayout li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 19px;
+  padding-block: 27px;
+  border-bottom: 1px solid #dce3e9;
+}
+
+.processLayout li > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--color-charcoal);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.processLayout h3 {
+  margin: 3px 0 9px;
+  font-size: 18px;
+}
+
+.pricingSection {
+  background:
+    radial-gradient(circle at 92% 6%, rgb(45 140 255 / 20%), transparent 25%),
+    #18242f;
+  color: #fff;
+}
+
+.pricingLayout h2 {
+  color: #fff;
+}
+
+.pricingLayout > div:first-child > div {
+  color: #b9c6d0;
+}
+
+.pricingLayout strong {
+  color: #fff;
+}
+
+.pricingLayout a {
+  color: #fff;
+}
+
+.pricingLayout > ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricingLayout > ul li {
+  display: grid;
+  min-height: 64px;
+  grid-template-columns: 44px 1fr;
+  gap: 13px;
+  align-items: center;
+  padding: 11px 17px;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 5%);
+  color: #e9f0f5;
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.pricingLayout > ul li span {
+  color: #84bcf8;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.relatedHeading {
+  max-width: 850px;
+  margin-bottom: 40px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.relatedGrid a {
+  position: relative;
+  min-height: 210px;
+  padding: 26px;
+  border: 1px solid #dfe6ec;
+  border-radius: 18px;
+  background: #f8fafc;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.relatedGrid a:hover,
+.relatedGrid a:focus-visible {
+  border-color: rgb(23 105 194 / 28%);
+  box-shadow: 0 19px 46px rgb(24 34 44 / 8%);
+  transform: translateY(-3px);
+}
+
+.relatedGrid a > span {
+  color: var(--color-blue);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.relatedGrid h3 {
+  margin: 42px 0 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.relatedGrid svg {
+  position: absolute;
+  right: 23px;
+  bottom: 23px;
+  color: var(--color-orange);
+}
+
+.faqList {
+  display: grid;
+  gap: 9px;
+}
+
+.faqIntro p {
+  margin-bottom: 0;
+}
+
+.faqList details {
+  overflow: hidden;
+  border: 1px solid #dde5eb;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.faqList summary {
+  display: grid;
+  min-height: 67px;
+  cursor: pointer;
+  grid-template-columns: 31px 1fr 18px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 18px;
+  color: var(--color-charcoal);
+  font-size: 13px;
+  font-weight: 780;
+  list-style: none;
+}
+
+.faqList summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqList summary > span {
+  color: var(--color-blue);
+  font-size: 10px;
+}
+
+.faqList summary i {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.faqList summary i::before,
+.faqList summary i::after {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 2px;
+  background: var(--color-orange);
+  content: "";
+}
+
+.faqList summary i::after {
+  transform: rotate(90deg);
+  transition: transform 180ms ease;
+}
+
+.faqList details[open] summary i::after {
+  transform: rotate(0);
+}
+
+.faqList p {
+  margin: 0 22px 22px 61px;
+  color: #66737e;
+  font-size: 12px;
+  line-height: 1.76;
+}
+
+.finalCta {
+  padding-block: 66px;
+  background: linear-gradient(135deg, #1b2934, #253a49);
+  color: #fff;
+}
+
+.finalCtaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+}
+
+.finalCta h2 {
+  max-width: 820px;
+  color: #fff;
+  font-size: clamp(29px, 3.7vw, 47px);
+}
+
+.finalCta a {
+  display: inline-flex;
+  min-height: 53px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 9px;
+  padding-inline: 21px;
+  border-radius: 11px;
+  background: var(--color-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+@media (max-width: 1020px) {
+  .heroLayout,
+  .strategyLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent,
+  .heroVisual,
+  .strategyCopy {
+    max-width: 760px;
+  }
+
+  .heroVisual {
+    width: min(100%, 720px);
+  }
+
+  .planningGrid,
+  .zoneGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .planningGrid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .planningGrid article:last-child {
+    grid-column: 1 / -1;
+    min-height: 260px;
+    border-top: 1px solid #e3e8ed;
+  }
+
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: min(calc(100% - 30px), var(--container));
+  }
+
+  .heroLayout {
+    min-height: auto;
+    gap: 43px;
+    padding-block: 52px 68px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 29px;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 11vw, 53px);
+  }
+
+  .heroSummary {
+    font-size: 14px;
+  }
+
+  .heroActions {
+    display: grid;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .heroVisual,
+  .heroVisual > img {
+    min-height: 405px;
+  }
+
+  .heroVisual > img {
+    height: 405px;
+    border-radius: 21px;
+  }
+
+  .heroVisual::after {
+    border-radius: 21px;
+  }
+
+  .routeBadge {
+    bottom: 102px;
+    left: 12px;
+  }
+
+  .contextLayout,
+  .sectionHeading,
+  .processLayout,
+  .pricingLayout,
+  .faqLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .contextLayout {
+    gap: 30px;
+  }
+
+  .contextLayout dl {
+    grid-template-columns: 1fr;
+  }
+
+  .contextLayout dl > div {
+    min-height: 115px;
+    border-right: 0;
+    border-bottom: 1px solid #e0e6eb;
+  }
+
+  .contextLayout dl > div:last-child {
+    border-bottom: 0;
+  }
+
+  .sectionHeading {
+    gap: 22px;
+    align-items: start;
+  }
+
+  .planningGrid,
+  .zoneGrid,
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .planningGrid article,
+  .planningGrid article:nth-child(2),
+  .planningGrid article:last-child {
+    min-height: 265px;
+    grid-column: auto;
+    border-right: 0;
+    border-bottom: 1px solid #e3e8ed;
+    border-top: 0;
+  }
+
+  .planningGrid article:last-child {
+    border-bottom: 0;
+  }
+
+  .zoneGrid article {
+    min-height: 280px;
+  }
+
+  .strategyVisual,
+  .strategyVisual > img {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .strategyVisual > div {
+    gap: 6px;
+    font-size: 8px;
+  }
+
+  .strategyVisual i {
+    width: 27px;
+  }
+
+  .processIntro,
+  .faqIntro {
+    position: static;
+  }
+
+  .processLayout,
+  .faqLayout {
+    gap: 38px;
+  }
+
+  .relatedGrid a {
+    min-height: 175px;
+  }
+
+  .faqList summary {
+    grid-template-columns: 26px 1fr 16px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .faqList p {
+    margin-left: 52px;
+  }
+
+  .finalCtaInner {
+    display: grid;
+  }
+
+  .finalCta a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    width: min(calc(100% - 24px), var(--container));
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .routeBadge {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton,
+  .zoneGrid article,
+  .relatedGrid a {
+    transition: none;
+  }
+}
+

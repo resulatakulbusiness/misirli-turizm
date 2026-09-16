@@ -16,6 +16,7 @@ const serviceLinks = [
 
 const regionLinks = [
   { label: "İstanbul Hizmet Bölgeleri", href: "/hizmet-bolgeleri" },
+  { label: "Başakşehir ve İkitelli Personel Servisi", href: "/hizmet-bolgeleri/basaksehir-personel-servisi" },
   { label: "Avrupa Yakası Planlama Bölgeleri", href: "/hizmet-bolgeleri#avrupa-yakasi" },
   { label: "Anadolu Yakası Planlama Bölgeleri", href: "/hizmet-bolgeleri#anadolu-yakasi" },
   { label: "İlçe Bazlı Hizmet Yapısı", href: "/hizmet-bolgeleri#ilce-yapisi" },

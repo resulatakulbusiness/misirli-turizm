@@ -10,6 +10,13 @@ import { SiteHeader } from "@/components/site-header";
 import { siteContact } from "@/lib/site-contact";
 import styles from "./regions.module.css";
 
+type RegionCluster = {
+  title: string;
+  text: string;
+  tags: string[];
+  href?: string;
+};
+
 export const metadata: Metadata = {
   title: "İstanbul Personel Servisi Hizmet Bölgeleri | Mısırlı",
   description:
@@ -28,11 +35,12 @@ export const metadata: Metadata = {
   },
 };
 
-const europeClusters = [
+const europeClusters: RegionCluster[] = [
   {
     title: "Başakşehir ve İkitelli",
     text: "Organize sanayi, üretim ve depo yoğunluğunda vardiya saati ile tesis giriş yönünün birlikte değerlendirilmesi gerekir.",
     tags: ["Başakşehir", "İkitelli", "Mahmutbey"],
+    href: "/hizmet-bolgeleri/basaksehir-personel-servisi",
   },
   {
     title: "Esenyurt ve Kıraç",
@@ -61,7 +69,7 @@ const europeClusters = [
   },
 ];
 
-const asiaClusters = [
+const asiaClusters: RegionCluster[] = [
   {
     title: "Tuzla ve sanayi aksı",
     text: "Tersane, organize sanayi ve üretim tesislerinde vardiya değişim trafiği servis süresinin önemli bir parçasıdır.",
@@ -121,7 +129,7 @@ function ArrowIcon() {
   );
 }
 
-function RegionGrid({ items }: { items: typeof europeClusters }) {
+function RegionGrid({ items }: { items: RegionCluster[] }) {
   return (
     <div className={styles.regionGrid}>
       {items.map((item, index) => (
@@ -132,6 +140,11 @@ function RegionGrid({ items }: { items: typeof europeClusters }) {
           <ul>
             {item.tags.map((tag) => <li key={tag}>{tag}</li>)}
           </ul>
+          {item.href ? (
+            <Link className={styles.regionLink} href={item.href}>
+              Bölge sayfasını inceleyin <ArrowIcon />
+            </Link>
+          ) : null}
         </article>
       ))}
     </div>

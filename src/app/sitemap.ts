@@ -45,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://misirliturizm.com/hizmet-bolgeleri/basaksehir-personel-servisi",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
       url: "https://misirliturizm.com/iletisim",
       lastModified: new Date(),
       changeFrequency: "monthly",

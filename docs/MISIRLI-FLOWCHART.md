@@ -47,7 +47,8 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [x] Kurumsal servis güzergâh planlama cluster sayfası
 - [x] Personel servisi fiyatları cluster sayfası
 - [x] İstanbul hizmet bölgeleri hub sayfası
-- [ ] İlçe bazlı hizmet bölgesi sayfaları
+- [x] İlk ilçe sayfası: Başakşehir–İkitelli personel servisi
+- [ ] Kalan ilçe bazlı hizmet bölgesi sayfaları
 - [ ] Nihai domain bağlantısı
 
 ## Yayın kapısı

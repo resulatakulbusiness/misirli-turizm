@@ -1,6 +1,6 @@
 # Mısırlı Turizm — Rakip ve SERP DNA Özeti
 
-Araştırma tarihi: 15 Eylül 2026  
+Araştırma tarihi: 15–16 Eylül 2026
 Ana arama niyeti: İstanbul kurumsal personel taşımacılığı, personel servisi ve vardiyalı servis planlama
 
 ## İncelenen görünür rakipler
@@ -24,6 +24,14 @@ Ana arama niyeti: İstanbul kurumsal personel taşımacılığı, personel servi
   ayrı URL'lerle derinleştirilmesi
 - İlçe ve sanayi bölgesi sorgularında yerel trafik, ana arter ve tesis yönü bilgisinin kullanılması
 
+## Başakşehir–İkitelli yerel SERP kararı
+
+16 Eylül 2026 araştırmasında Başakşehir ve İkitelli sonuçlarının önemli bölümü güvenli,
+konforlu ve zamanında ulaşım gibi genel ifadeleri tekrar ediyordu. Mısırlı sayfası bu nedenle
+İkitelli OSB tesis giriş yönü, vardiya çakışmaları, TEM–Basın Ekspres bağlantıları, çalışan
+kümeleri ve kapasite senaryolarına odaklandı. Kesin aylık arama hacmi erişimi olmadığı için
+rakam uydurulmadı; ana sorgular SERP tekrarı ve ticari niyet gücüne göre sıralandı.
+
 ## Mısırlı Turizm ayrışma kararı
 
 Mısırlı Turizm yalnızca araç sağlayan servis firması diliyle konumlandırılmaz. Ana anlatı;
@@ -43,12 +51,17 @@ Ana sayfada bu karar şu bileşenlerle uygulanır:
 
 - https://www.mevaturizm.com.tr/
 - https://www.mevaturizm.com.tr/personel-tasimaciligi
+- https://www.mevaturizm.com.tr/ikitelli.html
 - https://www.voltlines.com/tr/
 - https://www.ozata.com.tr/
 - https://www.ntniksarturizm.com/istanbul-personel-tasimaciligi.html
 - https://kaplanturizm.com/istanbul-personel-tasimaciligi/
 - https://www.personelservisi.com/
 - https://www.ozyuce.com/
+- https://www.pacificturizm.com/
+- https://www.alantasimacilik.com.tr/
+- https://iosb.org.tr/hakkimizda/
+- https://www.basaksehir.bel.tr/belediye-tarihcesi
 - https://guldemirturizm.com.tr/personel-servis-tasimaciligi/
 - https://www.bastugturizm.com/personel-servis-guzergahi-nasil-belirlenir/
 

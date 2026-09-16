@@ -17,6 +17,7 @@ sayfalarıyla derinleştirmek. İlçe sayfaları yalnızca gerçekten farklı ku
 | Cluster | `/fabrika-personel-tasimaciligi/` | Sanayi ve üretim tesisi ihtiyacı | Pillar ve vardiya sayfasına bağlanır |
 | Cluster | `/kurumsal-servis-guzergah-planlama/` | Rota, durak ve süre optimizasyonu | Pillar ve fiyat sayfasına bağlanır |
 | Cluster | `/personel-servisi-fiyatlari/` | Fiyatı belirleyen değişkenleri anlama | Pillar ve teklif sistemine bağlanır |
+| Lokasyon | `/hizmet-bolgeleri/basaksehir-personel-servisi/` | Başakşehir ve İkitelli OSB personel servisi araştırması | Hub, pillar, vardiya, fabrika ve rota kümelerine bağlanır |
 | Kurumsal | `/kurumsal/` | Firma yaklaşımı ve güven değerlendirmesi | Hizmet sayfalarına güven sinyali verir |
 | Dönüşüm | `/iletisim/` | Doğrulanmış kanaldan görüşme başlatma | Tüm ticari sayfalardan bağlantı alır |
 
@@ -35,6 +36,7 @@ verisiyle yeniden sıralanacaktır.
 | 4 | **vardiyalı personel servisi** | gece vardiyası personel servisi, çoklu vardiya servis planlama | `/vardiyali-personel-servisi` |
 | 5 | **servis güzergâh planlama** | personel servis rotası, durak planlama, rota optimizasyonu | `/kurumsal-servis-guzergah-planlama` |
 | 6 | **İstanbul personel servisi hizmet bölgeleri** | Avrupa Yakası personel servisi, Anadolu Yakası personel servisi | `/hizmet-bolgeleri` |
+| 7 | **Başakşehir personel servisi**, **İkitelli personel servisi** | İkitelli OSB personel taşımacılığı, Başakşehir vardiyalı personel servisi | `/hizmet-bolgeleri/basaksehir-personel-servisi` |
 
 ## İlçe sayfası URL modeli
 
@@ -42,6 +44,9 @@ verisiyle yeniden sıralanacaktır.
 Her sayfa bölgenin iş/sanayi yapısı, ana ulaşım aksları, vardiya senaryosu, komşu ilçe
 bağlantıları ve hizmet sayfalarına özgün iç linkler içermelidir. İlçe adı değiştirilmiş kopya
 metin yayınlanmaz.
+
+İlk lokasyon sayfası 16 Eylül 2026 tarihli canlı SERP ve resmî İkitelli OSB bölge verileri
+temel alınarak Başakşehir–İkitelli için yayıma hazırlanmıştır.
 
 ## İç link kuralları
 
@@ -67,6 +72,7 @@ metin yayınlanmaz.
 - Ana sayfa: `Organization`, genel `Service`, `FAQPage`
 - Pillar: `BreadcrumbList`, ayrıntılı `Service`, sayfaya özel `FAQPage`
 - Cluster: konuya özel `Service` veya `Article`; yalnız görünür sorular varsa `FAQPage`
+- Lokasyon: `BreadcrumbList`, yerel `areaServed` içeren `Service` ve görünür sorular için `FAQPage`
 - Kurumsal: doğrulanmış bilgilerle `AboutPage` ve `Organization`
 
 ## Yayın öncesi kapı

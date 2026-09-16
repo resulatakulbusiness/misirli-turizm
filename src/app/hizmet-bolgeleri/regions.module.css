@@ -296,6 +296,31 @@
   font-weight: 780;
 }
 
+.regionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--color-blue);
+  font-size: 11px;
+  font-weight: 830;
+  text-decoration: none;
+}
+
+.regionLink svg {
+  width: 16px;
+  fill: none;
+  stroke: var(--color-orange);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transition: transform 180ms ease;
+}
+
+.regionLink:hover svg {
+  transform: translateX(3px);
+}
+
 .structureLayout {
   align-items: start;
 }
