@@ -12,12 +12,15 @@ sayfalarıyla derinleştirmek. İlçe sayfaları yalnızca gerçekten farklı ku
 | Rol | URL | Birincil niyet | İç link görevi |
 | --- | --- | --- | --- |
 | Ana sayfa | `/` | Marka + B2B çözüm ortağı | Tüm ana kümeleri tanıtır |
+| Hizmet merkezi | `/hizmetlerimiz/` | Tüm kurumsal servis hizmetlerini karşılaştırma | Ana hizmet ve cluster sayfalarını dağıtır |
 | Pillar | `/personel-tasimaciligi` | İstanbul’da kurumsal personel servisi araştırması | Konunun ana otorite sayfasıdır |
 | Cluster | `/vardiyali-personel-servisi/` | Çoklu/değişken vardiya operasyonu | Pillar ve teklif sistemine bağlanır |
 | Cluster | `/fabrika-personel-tasimaciligi/` | Sanayi ve üretim tesisi ihtiyacı | Pillar ve vardiya sayfasına bağlanır |
 | Cluster | `/kurumsal-servis-guzergah-planlama/` | Rota, durak ve süre optimizasyonu | Pillar ve fiyat sayfasına bağlanır |
 | Cluster | `/personel-servisi-fiyatlari/` | Fiyatı belirleyen değişkenleri anlama | Pillar ve teklif sistemine bağlanır |
 | Lokasyon | `/hizmet-bolgeleri/basaksehir-personel-servisi/` | Başakşehir ve İkitelli OSB personel servisi araştırması | Hub, pillar, vardiya, fabrika ve rota kümelerine bağlanır |
+| Bölge | `/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi/` | Avrupa Yakası personel servisi araştırması | Başakşehir ve sonraki Avrupa Yakası ilçelerini üst kümeye bağlar |
+| Bölge | `/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi/` | Anadolu Yakası personel servisi araştırması | Pendik, Tuzla ve sonraki Anadolu Yakası ilçelerini üst kümeye bağlar |
 | Kurumsal | `/kurumsal/` | Firma yaklaşımı ve güven değerlendirmesi | Hizmet sayfalarına güven sinyali verir |
 | Dönüşüm | `/iletisim/` | Doğrulanmış kanaldan görüşme başlatma | Tüm ticari sayfalardan bağlantı alır |
 
@@ -57,6 +60,8 @@ temel alınarak Başakşehir–İkitelli için yayıma hazırlanmıştır.
 5. Aynı anchor metni her yerde tekrarlanmaz; bağlantı metni cümlenin amacına göre yazılır.
 6. Ana anahtar kelime H1, giriş ve en az bir doğal gövde cümlesinde güçlü vurgu (`strong`) alır;
    tekrar ve anahtar kelime doldurma yapılmaz.
+7. Menü bağlantıları ana sayfa ankrajına değil, ilgili bağımsız SEO sayfasına gider.
+8. İlçe sayfası ilgili Avrupa veya Anadolu Yakası üst bölge sayfasından bağlantı alır ve breadcrumb içinde bu üst kümeyi gösterir.
 
 ## Cannibalization sınırı
 

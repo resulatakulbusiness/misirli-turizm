@@ -20,6 +20,7 @@ type ZoneItem = ContentItem & {
 export type DistrictPageData = {
   slug: string;
   district: string;
+  parentRegion: { name: string; href: string };
   eyebrow: string;
   title: string;
   accent: string;
@@ -97,7 +98,8 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://misirliturizm.com/" },
           { "@type": "ListItem", position: 2, name: "Hizmet Bölgeleri", item: "https://misirliturizm.com/hizmet-bolgeleri" },
-          { "@type": "ListItem", position: 3, name: `${data.district} Personel Servisi`, item: canonical },
+          { "@type": "ListItem", position: 3, name: data.parentRegion.name, item: `https://misirliturizm.com${data.parentRegion.href}` },
+          { "@type": "ListItem", position: 4, name: `${data.district} Personel Servisi`, item: canonical },
         ],
       },
       {
@@ -151,6 +153,8 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
                 <Link href="/">Ana Sayfa</Link>
                 <span>/</span>
                 <Link href="/hizmet-bolgeleri">Hizmet Bölgeleri</Link>
+                <span>/</span>
+                <Link href={data.parentRegion.href}>{data.parentRegion.name}</Link>
                 <span>/</span>
                 <span>{data.district}</span>
               </nav>
@@ -359,4 +363,3 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
     </>
   );
 }
-

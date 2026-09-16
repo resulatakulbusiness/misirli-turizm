@@ -15,6 +15,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://misirliturizm.com/hizmetlerimiz",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: "https://misirliturizm.com/kurumsal",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
       url: "https://misirliturizm.com/vardiyali-personel-servisi",
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -49,6 +61,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.75,
+    },
+    {
+      url: "https://misirliturizm.com/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://misirliturizm.com/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: "https://misirliturizm.com/iletisim",

@@ -161,7 +161,7 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
               </h1>
               <div className={styles.heroSummary}>{data.summary}</div>
               <div className={styles.heroActions}>
-                <Link className={styles.primaryButton} href="/#hizli-teklif">
+                <Link className={styles.primaryButton} href="/iletisim">
                   Hızlı ön değerlendirme <ArrowIcon />
                 </Link>
                 <a className={styles.secondaryButton} href="#detaylar">
@@ -253,7 +253,7 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
               <span>{data.process.kicker}</span>
               <h2 id="process-title">{data.process.title}</h2>
               <div>{data.process.lead}</div>
-              <Link href="/#hizli-teklif">Operasyonunuzu anlatın <ArrowIcon /></Link>
+              <Link href="/iletisim">Operasyonunuzu anlatın <ArrowIcon /></Link>
             </div>
             <ol className={styles.steps}>
               {data.process.steps.map((step, index) => (
@@ -326,7 +326,7 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
               <span>İlk adım: doğru veriler</span>
               <h2 id="cluster-cta-title">İhtiyacınızı araç listesinden önce operasyon planına dönüştürelim.</h2>
             </div>
-            <Link href="/#hizli-teklif">Hızlı ön değerlendirme <ArrowIcon /></Link>
+            <Link href="/iletisim">Hızlı ön değerlendirme <ArrowIcon /></Link>
           </div>
         </section>
       </main>

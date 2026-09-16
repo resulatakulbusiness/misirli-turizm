@@ -16,6 +16,13 @@ export default function Home() {
         logo: "https://misirliturizm.com/brand/misirli-turizm-logo.png",
         telephone: siteContact.phoneE164,
         email: siteContact.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteContact.streetAddress,
+          addressLocality: siteContact.addressLocality,
+          addressRegion: siteContact.addressRegion,
+          addressCountry: siteContact.postalCountry,
+        },
         contactPoint: {
           "@type": "ContactPoint",
           telephone: siteContact.phoneE164,

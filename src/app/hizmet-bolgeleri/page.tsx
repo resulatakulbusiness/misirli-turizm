@@ -214,8 +214,8 @@ export default function ServiceRegionsPage() {
                 verir. Bölge mimarisini bu dört veriyi birlikte ele alacak şekilde kuruyoruz.
               </p>
               <div className={styles.heroActions}>
-                <Link href="/#hizli-teklif">Bölgenizi paylaşın <ArrowIcon /></Link>
-                <a href="#avrupa-yakasi">Bölgeleri inceleyin</a>
+                <Link href="/iletisim">Bölgenizi paylaşın <ArrowIcon /></Link>
+                <Link href="/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi">Avrupa Yakası sayfası</Link>
               </div>
               <div className={styles.keywordRow}>
                 <strong>Avrupa Yakası personel servisi</strong>
@@ -258,6 +258,9 @@ export default function ServiceRegionsPage() {
               <div><span>01 · Avrupa Yakası</span><h2 id="europe-title">Sanayi, konut ve ana arterleri birlikte okuyan hatlar.</h2></div>
               <p><strong>Avrupa Yakası personel servisi</strong> planında E-5, TEM, bağlantı yolları ve sanayi bölgelerinin vardiya trafiği birlikte değerlendirilir.</p>
             </div>
+            <Link className={styles.regionOverviewLink} href="/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi">
+              İstanbul Avrupa Yakası personel servisi sayfasını açın <ArrowIcon />
+            </Link>
             <RegionGrid items={europeClusters} />
           </div>
         </section>
@@ -268,6 +271,9 @@ export default function ServiceRegionsPage() {
               <div><span>02 · Anadolu Yakası</span><h2 id="asia-title">Tesis yönü ve çalışan yoğunluğuna göre bölgesel kümeler.</h2></div>
               <p><strong>Anadolu Yakası personel servisi</strong> hatlarında TEM, E-5, sanayi aksları ve farklı iş merkezi yönleri vardiya saatine göre ele alınır.</p>
             </div>
+            <Link className={styles.regionOverviewLink} href="/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi">
+              İstanbul Anadolu Yakası personel servisi sayfasını açın <ArrowIcon />
+            </Link>
             <RegionGrid items={asiaClusters} />
           </div>
         </section>
@@ -305,7 +311,7 @@ export default function ServiceRegionsPage() {
         <section className={styles.finalCta}>
           <div className={`${styles.container} ${styles.finalCtaInner}`}>
             <div><span>İstanbul operasyonu</span><h2>Personel bölgelerinizi vardiya ve tesis yönüyle birlikte değerlendirelim.</h2></div>
-            <Link href="/#hizli-teklif">Hızlı ön değerlendirme <ArrowIcon /></Link>
+            <Link href="/iletisim">Hızlı ön değerlendirme <ArrowIcon /></Link>
           </div>
         </section>
       </main>

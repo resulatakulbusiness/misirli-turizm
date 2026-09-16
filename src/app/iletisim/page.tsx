@@ -53,6 +53,11 @@ const faqs = [
     answer:
       "Hazır bir güzergâhınızın olması gerekmez. Personelin genel bölgeleri ve tesis konumu paylaşıldığında ilk rota ve durak değerlendirmesi planlama sürecinde oluşturulur.",
   },
+  {
+    question: "Mısırlı Turizm adresi nerede?",
+    answer:
+      `Doğrulanmış iletişim adresimiz ${siteContact.addressDisplay} şeklindedir. Ziyaret öncesinde ${siteContact.phoneDisplay} numarasından randevu ve uygunluk bilgisi alabilirsiniz.`,
+  },
 ];
 
 function ArrowIcon() {
@@ -89,6 +94,15 @@ function MailIcon() {
   );
 }
 
+function LocationIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </svg>
+  );
+}
+
 export default function ContactPage() {
   const canonical = "https://misirliturizm.com/iletisim";
   const jsonLd = {
@@ -118,6 +132,13 @@ export default function ContactPage() {
         url: "https://misirliturizm.com/",
         telephone: siteContact.phoneE164,
         email: siteContact.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteContact.streetAddress,
+          addressLocality: siteContact.addressLocality,
+          addressRegion: siteContact.addressRegion,
+          addressCountry: siteContact.postalCountry,
+        },
         contactPoint: {
           "@type": "ContactPoint",
           telephone: siteContact.phoneE164,
@@ -201,7 +222,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className={styles.channels} aria-labelledby="channels-title">
+        <section className={styles.channels} id="iletisim-kanallari" aria-labelledby="channels-title">
           <div className={styles.container}>
             <div className={styles.sectionHeading}>
               <div>
@@ -239,6 +260,37 @@ export default function ContactPage() {
           </div>
         </section>
 
+        <section className={styles.location} id="konum" aria-labelledby="location-title">
+          <div className={`${styles.container} ${styles.locationLayout}`}>
+            <div className={styles.locationCopy}>
+              <span>Doğrulanmış şirket konumu</span>
+              <h2 id="location-title">Mısırlı Turizm Pendik iletişim adresi.</h2>
+              <p>
+                <strong>{siteContact.addressDisplay}</strong> adresindeki konumumuz kurumsal
+                iletişim ve operasyon görüşmeleri için kayıtlıdır. Ziyaret öncesinde
+                {" "}<a href={siteContact.phoneHref}>{siteContact.phoneDisplay}</a> numarasından
+                randevu ve uygunluk bilgisi almanızı öneririz.
+              </p>
+              <div className={styles.addressCard}>
+                <i><LocationIcon /></i>
+                <div><span>Adres</span><strong>{siteContact.addressDisplay}</strong></div>
+              </div>
+              <a className={styles.mapLink} href={siteContact.mapsSearchHref} target="_blank" rel="noopener noreferrer">
+                Google Haritalar&apos;da yol tarifi alın <ArrowIcon />
+              </a>
+            </div>
+            <div className={styles.mapFrame}>
+              <iframe
+                src={siteContact.mapsEmbedHref}
+                title="Mısırlı Turizm Kaynarca Pendik konumu"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </section>
+
         <section className={styles.preparation} aria-labelledby="preparation-title">
           <div className={`${styles.container} ${styles.preparationLayout}`}>
             <div>
@@ -249,7 +301,7 @@ export default function ContactPage() {
                 <strong> personel servisi teklifinin</strong> araç sayısından önce gerçek
                 operasyon ihtiyacına dayanmasını sağlar.
               </p>
-              <Link href="/#hizli-teklif">Hızlı teklif formunu doldurun <ArrowIcon /></Link>
+              <a href={siteContact.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp&apos;tan ön bilgi gönderin <ArrowIcon /></a>
             </div>
             <ol>
               <li><span>01</span><strong>Tesis veya işyeri konumu</strong></li>
@@ -301,4 +353,3 @@ export default function ContactPage() {
     </>
   );
 }
-

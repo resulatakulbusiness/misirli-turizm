@@ -218,6 +218,26 @@
   stroke-width: 1.8;
 }
 
+.dropdownPanel a.dropdownChild {
+  position: relative;
+  min-height: 42px;
+  margin-left: 12px;
+  padding-left: 23px;
+  border-left: 2px solid #dbe8f5;
+  color: #64727d;
+  font-size: 10px;
+}
+
+.dropdownPanel a.dropdownChild::before {
+  position: absolute;
+  left: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  content: "";
+}
+
 .headerCta,
 .primaryButton,
 .secondaryButton,
@@ -1187,6 +1207,14 @@
   .mobileSubmenu > div a:focus-visible {
     background: #fff;
     color: var(--color-blue);
+  }
+
+  .mobileSubmenu > div a.mobileDropdownChild {
+    margin-left: 12px;
+    padding-left: 27px;
+    border-left: 2px solid #dbe8f5;
+    color: #697783;
+    font-size: 11px;
   }
 
   .mobileMenuCta {

@@ -29,6 +29,10 @@ export const metadata: Metadata = {
 const data: DistrictPageData = {
   slug: "basaksehir-personel-servisi",
   district: "Başakşehir",
+  parentRegion: {
+    name: "İstanbul Avrupa Yakası",
+    href: "/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi",
+  },
   eyebrow: "Başakşehir · İkitelli OSB · kurumsal ulaşım",
   title: "Başakşehir Personel Servisi",
   accent: "vardiya ve tesis yönüne göre planlanır.",
@@ -299,7 +303,7 @@ const data: DistrictPageData = {
     },
   ],
   related: [
-    { href: "/personel-tasimaciligi", label: "Ana hizmet", title: "İstanbul kurumsal personel taşımacılığı" },
+    { href: "/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi", label: "Üst bölge", title: "İstanbul Avrupa Yakası personel servisi" },
     { href: "/vardiyali-personel-servisi", label: "Vardiya", title: "Vardiyalı personel servisi" },
     { href: "/fabrika-personel-tasimaciligi", label: "Üretim", title: "Fabrika personel taşımacılığı" },
     { href: "/kurumsal-servis-guzergah-planlama", label: "Rota", title: "Kurumsal güzergâh planlama" },
@@ -309,4 +313,3 @@ const data: DistrictPageData = {
 export default function BasaksehirPersonnelServicePage() {
   return <DistrictPage data={data} />;
 }
-

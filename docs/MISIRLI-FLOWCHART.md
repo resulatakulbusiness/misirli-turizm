@@ -47,7 +47,12 @@ Bu sorulardan biri belirsizse geliştirme veya yayın işlemi durdurulur.
 - [x] Kurumsal servis güzergâh planlama cluster sayfası
 - [x] Personel servisi fiyatları cluster sayfası
 - [x] İstanbul hizmet bölgeleri hub sayfası
+- [x] İstanbul Avrupa Yakası ayrı SEO bölge sayfası
+- [x] İstanbul Anadolu Yakası ayrı SEO bölge sayfası
 - [x] İlk ilçe sayfası: Başakşehir–İkitelli personel servisi
+- [x] Hizmetlerimiz bağımsız menü ve SEO merkez sayfası
+- [x] Kurumsal bağımsız menü ve SEO sayfası
+- [x] İletişim sayfasında doğrulanmış Pendik adresi ve harita
 - [ ] Kalan ilçe bazlı hizmet bölgesi sayfaları
 - [ ] Nihai domain bağlantısı
 

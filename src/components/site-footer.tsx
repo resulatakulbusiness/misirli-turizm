@@ -19,11 +19,15 @@ export function SiteFooter() {
         <nav aria-label="Alt menü">
           <strong>Site haritası</strong>
           <Link href="/">Ana Sayfa</Link>
+          <Link href="/kurumsal">Kurumsal</Link>
+          <Link href="/hizmetlerimiz">Tüm Hizmetlerimiz</Link>
           <Link href="/personel-tasimaciligi">Personel Taşımacılığı</Link>
           <Link href="/vardiyali-personel-servisi">Vardiyalı Personel Servisi</Link>
           <Link href="/fabrika-personel-tasimaciligi">Fabrika Personel Servisi</Link>
           <Link href="/personel-servisi-fiyatlari">Personel Servisi Fiyatları</Link>
           <Link href="/hizmet-bolgeleri">Hizmet Bölgeleri</Link>
+          <Link href="/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi">Avrupa Yakası</Link>
+          <Link href="/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi">Anadolu Yakası</Link>
           <Link href="/iletisim">Bize Ulaşın</Link>
         </nav>
         <div className={styles.footerAction}>
@@ -33,8 +37,9 @@ export function SiteFooter() {
             <a href={siteContact.phoneHref}>Ara: {siteContact.phoneDisplay}</a>
             <a href={siteContact.whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp&apos;tan yazın</a>
             <a href={siteContact.emailHref}>{siteContact.email}</a>
+            <a href={siteContact.mapsSearchHref} target="_blank" rel="noopener noreferrer">{siteContact.addressDisplay}</a>
           </div>
-          <Link href="/#hizli-teklif">Hızlı teklif formu</Link>
+          <Link href="/iletisim">Hızlı teklif ve iletişim</Link>
         </div>
       </div>
       <div className={`${styles.container} ${styles.footerBottom}`}>

@@ -239,6 +239,27 @@
   gap: 14px;
 }
 
+.regionOverviewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: -15px 0 30px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--color-orange);
+  color: var(--color-blue);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.regionOverviewLink svg {
+  width: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .regionGrid article {
   min-height: 290px;
   padding: 28px;

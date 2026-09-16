@@ -323,7 +323,7 @@ export default function PersonnelTransportationPage() {
                 bu verileri güzergâh, durak, kapasite ve günlük koordinasyon planına dönüştürür.
               </p>
               <div className={styles.heroActions}>
-                <Link className={styles.primaryButton} href="/#hizli-teklif">
+                <Link className={styles.primaryButton} href="/iletisim">
                   Operasyonunuzu özetleyin <ArrowIcon />
                 </Link>
                 <a className={styles.secondaryButton} href="#nasil-planlanir">
@@ -404,7 +404,7 @@ export default function PersonnelTransportationPage() {
                 Amaç, teorik olarak en kısa rotayı değil; vardiya saatinde uygulanabilen,
                 kapasitesi doğru ve değişiklik olduğunda yönetilebilen ulaşım düzenini kurmaktır.
               </p>
-              <Link href="/#hizli-teklif">İlk verileri paylaşın <ArrowIcon /></Link>
+              <Link href="/iletisim">İlk verileri paylaşın <ArrowIcon /></Link>
             </div>
             <ol className={styles.planningSteps}>
               {planningSteps.map((step, index) => (
@@ -475,7 +475,7 @@ export default function PersonnelTransportationPage() {
                 Personel sayısı tek başına fiyat oluşturmaz. Doğru teklif, aynı anda çalışan
                 güzergâh ve vardiya bileşenleri netleştikten sonra hazırlanabilir.
               </p>
-              <Link href="/#hizli-teklif">Hızlı ön değerlendirme <ArrowIcon /></Link>
+              <Link href="/iletisim">Hızlı ön değerlendirme <ArrowIcon /></Link>
             </div>
             <div className={styles.factorContent}>
               <span className={styles.kicker}>Personel servisi fiyatını belirleyenler</span>
@@ -563,7 +563,7 @@ export default function PersonnelTransportationPage() {
               <span>İlk adım: operasyon özeti</span>
               <h2 id="service-cta-title">Personel dağılımınızı ve vardiya yapınızı uygulanabilir bir servis planına dönüştürelim.</h2>
             </div>
-            <Link href="/#hizli-teklif">Ön değerlendirmeyi başlat <ArrowIcon /></Link>
+            <Link href="/iletisim">Ön değerlendirmeyi başlat <ArrowIcon /></Link>
           </div>
         </section>
       </main>
