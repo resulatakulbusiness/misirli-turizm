@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import { MobileCta } from "./mobile-cta";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -44,7 +45,7 @@ function CheckIcon() {
 }
 
 export function OverviewPage({ data }: { data: OverviewPageData }) {
-  const canonical = `https://misirliturizm.com/${data.slug}`;
+  const canonical = absoluteUrl(`/${data.slug}`);
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -52,7 +53,7 @@ export function OverviewPage({ data }: { data: OverviewPageData }) {
         "@type": "BreadcrumbList",
         "@id": `${canonical}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://misirliturizm.com/" },
+          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: absoluteUrl() },
           { "@type": "ListItem", position: 2, name: data.breadcrumb, item: canonical },
         ],
       },
@@ -61,7 +62,7 @@ export function OverviewPage({ data }: { data: OverviewPageData }) {
         "@id": `${canonical}#webpage`,
         name: data.title,
         url: canonical,
-        about: { "@id": "https://misirliturizm.com/#organization" },
+        about: { "@id": `${siteUrl}/#organization` },
         description: data.schemaDescription,
       },
       {

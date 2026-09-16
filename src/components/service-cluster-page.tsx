@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import { MobileCta } from "./mobile-cta";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -76,7 +77,7 @@ function CheckIcon() {
 }
 
 export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
-  const canonical = `https://misirliturizm.com/${data.slug}`;
+  const canonical = absoluteUrl(`/${data.slug}`);
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,13 +89,13 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
             "@type": "ListItem",
             position: 1,
             name: "Ana Sayfa",
-            item: "https://misirliturizm.com/",
+            item: absoluteUrl(),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Personel Taşımacılığı",
-            item: "https://misirliturizm.com/personel-tasimaciligi",
+            item: absoluteUrl("/personel-tasimaciligi"),
           },
           {
             "@type": "ListItem",
@@ -112,9 +113,9 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
         url: canonical,
         provider: {
           "@type": "Organization",
-          "@id": "https://misirliturizm.com/#organization",
+          "@id": `${siteUrl}/#organization`,
           name: "Mısırlı Turizm",
-          url: "https://misirliturizm.com/",
+          url: absoluteUrl(),
           telephone: siteContact.phoneE164,
           email: siteContact.email,
         },

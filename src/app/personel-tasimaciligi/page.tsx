@@ -6,6 +6,7 @@ import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import styles from "./service.module.css";
 
 export const metadata: Metadata = {
@@ -249,33 +250,33 @@ export default function PersonnelTransportationPage() {
     "@graph": [
       {
         "@type": "BreadcrumbList",
-        "@id": "https://misirliturizm.com/personel-tasimaciligi#breadcrumb",
+        "@id": `${siteUrl}/personel-tasimaciligi#breadcrumb`,
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Ana Sayfa",
-            item: "https://misirliturizm.com/",
+            item: absoluteUrl(),
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Personel Taşımacılığı",
-            item: "https://misirliturizm.com/personel-tasimaciligi",
+            item: absoluteUrl("/personel-tasimaciligi"),
           },
         ],
       },
       {
         "@type": "Service",
-        "@id": "https://misirliturizm.com/personel-tasimaciligi#service",
+        "@id": `${siteUrl}/personel-tasimaciligi#service`,
         name: "İstanbul Kurumsal Personel Taşımacılığı",
         serviceType: "Kurumsal personel taşımacılığı ve servis operasyon planlama",
-        url: "https://misirliturizm.com/personel-tasimaciligi",
+        url: absoluteUrl("/personel-tasimaciligi"),
         provider: {
           "@type": "Organization",
-          "@id": "https://misirliturizm.com/#organization",
+          "@id": `${siteUrl}/#organization`,
           name: "Mısırlı Turizm",
-          url: "https://misirliturizm.com/",
+          url: absoluteUrl(),
           telephone: siteContact.phoneE164,
           email: siteContact.email,
         },
@@ -286,7 +287,7 @@ export default function PersonnelTransportationPage() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://misirliturizm.com/personel-tasimaciligi#faq",
+        "@id": `${siteUrl}/personel-tasimaciligi#faq`,
         mainEntity: serviceFaqs.map((item) => ({
           "@type": "Question",
           name: item.question,

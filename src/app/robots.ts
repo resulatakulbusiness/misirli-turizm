@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://misirliturizm.com/sitemap.xml",
-    host: "https://misirliturizm.com",
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host: siteUrl,
   };
 }

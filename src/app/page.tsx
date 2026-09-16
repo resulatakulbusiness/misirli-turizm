@@ -3,6 +3,7 @@ import { HomeSections, faqs } from "@/components/home-sections";
 import { MobileCta } from "@/components/mobile-cta";
 import { SiteHeader } from "@/components/site-header";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 
 export default function Home() {
   const jsonLd = {
@@ -10,10 +11,10 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://misirliturizm.com/#organization",
+        "@id": `${siteUrl}/#organization`,
         name: "Mısırlı Turizm",
-        url: "https://misirliturizm.com/",
-        logo: "https://misirliturizm.com/brand/misirli-turizm-logo.png",
+        url: absoluteUrl(),
+        logo: absoluteUrl("/brand/misirli-turizm-logo.png"),
         telephone: siteContact.phoneE164,
         email: siteContact.email,
         address: {
@@ -34,11 +35,32 @@ export default function Home() {
           "İstanbul'daki işletmeler için personel lokasyonu, vardiya ve güzergâh planlamasını birlikte ele alan kurumsal ulaşım çözüm ortağı.",
       },
       {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: absoluteUrl(),
+        name: "Mısırlı Turizm",
+        publisher: { "@id": `${siteUrl}/#organization` },
+        inLanguage: "tr-TR",
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/#webpage`,
+        url: absoluteUrl(),
+        name: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        about: { "@id": `${siteUrl}/#organization` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: absoluteUrl("/images/hero-personel-tasimaciligi.webp"),
+        },
+        inLanguage: "tr-TR",
+      },
+      {
         "@type": "Service",
-        "@id": "https://misirliturizm.com/#service",
+        "@id": `${siteUrl}/#service`,
         name: "Kurumsal Personel Taşımacılığı",
         serviceType: "Kurumsal personel taşımacılığı ve servis operasyon planlama",
-        provider: { "@id": "https://misirliturizm.com/#organization" },
+        provider: { "@id": `${siteUrl}/#organization` },
         areaServed: {
           "@type": "City",
           name: "İstanbul",
@@ -48,7 +70,7 @@ export default function Home() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://misirliturizm.com/#faq",
+        "@id": `${siteUrl}/#faq`,
         mainEntity: faqs.map((item) => ({
           "@type": "Question",
           name: item.question,

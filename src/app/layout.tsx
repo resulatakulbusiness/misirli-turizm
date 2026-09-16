@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -9,10 +10,35 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://misirliturizm.com"),
+  metadataBase: new URL(siteUrl),
   title: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",
   description:
     "İstanbul’da personel lokasyonu, vardiya ve güzergâh planlamasını birlikte yöneten Mısırlı Turizm ile kurumsal ulaşım operasyonunuzu planlayın.",
+  applicationName: "Mısırlı Turizm",
+  authors: [{ name: "Mısırlı Turizm", url: siteUrl }],
+  creator: "Mısırlı Turizm",
+  publisher: "Mısırlı Turizm",
+  keywords: [
+    "kurumsal personel taşımacılığı",
+    "İstanbul personel servisi",
+    "vardiyalı personel servisi",
+    "fabrika personel taşımacılığı",
+    "servis güzergâh planlama",
+    "Mısırlı Turizm",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: { canonical: "/" },
   openGraph: {
     title: "Mısırlı Turizm | Planlı Kurumsal Personel Ulaşımı",

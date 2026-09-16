@@ -8,6 +8,7 @@ import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import styles from "./regions.module.css";
 
 type RegionCluster = {
@@ -152,7 +153,7 @@ function RegionGrid({ items }: { items: RegionCluster[] }) {
 }
 
 export default function ServiceRegionsPage() {
-  const canonical = "https://misirliturizm.com/hizmet-bolgeleri";
+  const canonical = absoluteUrl("/hizmet-bolgeleri");
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -160,7 +161,7 @@ export default function ServiceRegionsPage() {
         "@type": "BreadcrumbList",
         "@id": `${canonical}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://misirliturizm.com/" },
+          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: absoluteUrl() },
           { "@type": "ListItem", position: 2, name: "Hizmet Bölgeleri", item: canonical },
         ],
       },
@@ -172,7 +173,7 @@ export default function ServiceRegionsPage() {
         url: canonical,
         provider: {
           "@type": "Organization",
-          "@id": "https://misirliturizm.com/#organization",
+          "@id": `${siteUrl}/#organization`,
           name: "Mısırlı Turizm",
           telephone: siteContact.phoneE164,
           email: siteContact.email,

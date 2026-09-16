@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import { MobileCta } from "./mobile-cta";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -88,7 +89,7 @@ function CheckIcon() {
 }
 
 export function DistrictPage({ data }: { data: DistrictPageData }) {
-  const canonical = `https://misirliturizm.com/hizmet-bolgeleri/${data.slug}`;
+  const canonical = absoluteUrl(`/hizmet-bolgeleri/${data.slug}`);
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -96,9 +97,9 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
         "@type": "BreadcrumbList",
         "@id": `${canonical}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://misirliturizm.com/" },
-          { "@type": "ListItem", position: 2, name: "Hizmet Bölgeleri", item: "https://misirliturizm.com/hizmet-bolgeleri" },
-          { "@type": "ListItem", position: 3, name: data.parentRegion.name, item: `https://misirliturizm.com${data.parentRegion.href}` },
+          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: absoluteUrl() },
+          { "@type": "ListItem", position: 2, name: "Hizmet Bölgeleri", item: absoluteUrl("/hizmet-bolgeleri") },
+          { "@type": "ListItem", position: 3, name: data.parentRegion.name, item: absoluteUrl(data.parentRegion.href) },
           { "@type": "ListItem", position: 4, name: `${data.district} Personel Servisi`, item: canonical },
         ],
       },
@@ -110,9 +111,9 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
         url: canonical,
         provider: {
           "@type": "Organization",
-          "@id": "https://misirliturizm.com/#organization",
+          "@id": `${siteUrl}/#organization`,
           name: "Mısırlı Turizm",
-          url: "https://misirliturizm.com/",
+          url: absoluteUrl(),
           telephone: siteContact.phoneE164,
           email: siteContact.email,
         },

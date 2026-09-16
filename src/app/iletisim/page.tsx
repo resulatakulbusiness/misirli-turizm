@@ -6,6 +6,7 @@ import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteContact } from "@/lib/site-contact";
+import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
@@ -104,7 +105,7 @@ function LocationIcon() {
 }
 
 export default function ContactPage() {
-  const canonical = "https://misirliturizm.com/iletisim";
+  const canonical = absoluteUrl("/iletisim");
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -112,7 +113,7 @@ export default function ContactPage() {
         "@type": "BreadcrumbList",
         "@id": `${canonical}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://misirliturizm.com/" },
+          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: absoluteUrl() },
           { "@type": "ListItem", position: 2, name: "İletişim", item: canonical },
         ],
       },
@@ -121,15 +122,15 @@ export default function ContactPage() {
         "@id": `${canonical}#webpage`,
         name: "Mısırlı Turizm İletişim",
         url: canonical,
-        about: { "@id": "https://misirliturizm.com/#organization" },
+        about: { "@id": `${siteUrl}/#organization` },
         description:
           "İstanbul kurumsal personel taşımacılığı ve servis operasyon planlama talepleri için Mısırlı Turizm iletişim sayfası.",
       },
       {
         "@type": "Organization",
-        "@id": "https://misirliturizm.com/#organization",
+        "@id": `${siteUrl}/#organization`,
         name: "Mısırlı Turizm",
-        url: "https://misirliturizm.com/",
+        url: absoluteUrl(),
         telephone: siteContact.phoneE164,
         email: siteContact.email,
         address: {
