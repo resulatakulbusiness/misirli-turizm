@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { siteContact } from "@/lib/site-contact";
 import { BrandMark } from "./brand-mark";
+import { SiteLink as Link } from "./site-link";
 import styles from "./sections.module.css";
 
 export function SiteFooter() {

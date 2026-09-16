@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import Link from "next/link";
+import { SiteLink as Link } from "./site-link";
 import { useEffect, useState } from "react";
 import officeImage from "../../public/images/hero-kurumsal-ofis-servisi.webp";
 import personnelImage from "../../public/images/hero-personel-tasimaciligi.webp";

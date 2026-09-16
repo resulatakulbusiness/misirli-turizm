@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { SiteLink as Link } from "./site-link";
 import factoryImage from "../../public/images/hero-vardiyali-fabrika-servisi.webp";
 import officeImage from "../../public/images/hero-kurumsal-ofis-servisi.webp";
 import personnelImage from "../../public/images/hero-personel-tasimaciligi.webp";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { SiteLink as Link } from "@/components/site-link";
 import serviceImage from "../../../public/images/misirli-turizm-kurumsal-personel-servisi.webp";
 import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";

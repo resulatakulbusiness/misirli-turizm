@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
-import Link from "next/link";
+import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
 import { MobileCta } from "./mobile-cta";

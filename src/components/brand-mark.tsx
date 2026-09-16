@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import logo from "../../public/brand/misirli-turizm-logo.png";
+import { SiteLink as Link } from "./site-link";
 import styles from "./landing.module.css";
 
 export function BrandMark() {

@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { siteContact } from "@/lib/site-contact";
 import { BrandMark } from "./brand-mark";
+import { SiteLink as Link } from "./site-link";
 import styles from "./landing.module.css";
 
 type NavItem = { label: string; href: string; indent?: boolean };
@@ -48,10 +48,13 @@ function ChevronIcon() {
   );
 }
 
-function DesktopDropdown({ label, links }: { label: string; links: NavItem[] }) {
+function DesktopDropdown({ label, overviewHref, links }: { label: string; overviewHref: string; links: NavItem[] }) {
   return (
     <details className={styles.navDropdown}>
-      <summary>{label}<ChevronIcon /></summary>
+      <summary aria-label={`${label} alt menüsünü aç`}>
+        <Link href={overviewHref} onClick={(event) => event.stopPropagation()}>{label}</Link>
+        <ChevronIcon />
+      </summary>
       <div className={styles.dropdownPanel}>
         <span>{label}</span>
         {links.map((item) => (
@@ -64,10 +67,13 @@ function DesktopDropdown({ label, links }: { label: string; links: NavItem[] }) 
   );
 }
 
-function MobileDropdown({ label, links }: { label: string; links: NavItem[] }) {
+function MobileDropdown({ label, overviewHref, links }: { label: string; overviewHref: string; links: NavItem[] }) {
   return (
     <details className={styles.mobileSubmenu}>
-      <summary>{label}<ChevronIcon /></summary>
+      <summary aria-label={`${label} alt menüsünü aç`}>
+        <Link href={overviewHref} onClick={(event) => event.stopPropagation()}>{label}</Link>
+        <ChevronIcon />
+      </summary>
       <div>
         {links.map((item) => <Link className={item.indent ? styles.mobileDropdownChild : undefined} key={item.href} href={item.href}>{item.label}</Link>)}
       </div>
@@ -100,8 +106,8 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
 
         <nav className={styles.desktopNav} aria-label="Ana menü">
           <Link className={styles.navLink} href="/">Ana Sayfa</Link>
-          <DesktopDropdown label="Hizmetlerimiz" links={serviceLinks} />
-          <DesktopDropdown label="Hizmet Bölgelerimiz" links={regionLinks} />
+          <DesktopDropdown label="Hizmetlerimiz" overviewHref="/hizmetlerimiz" links={serviceLinks} />
+          <DesktopDropdown label="Hizmet Bölgelerimiz" overviewHref="/hizmet-bolgeleri" links={regionLinks} />
           <Link className={styles.navLink} href="/kurumsal">Kurumsal</Link>
           <Link className={styles.navLink} href="/iletisim">Bize Ulaşın</Link>
         </nav>
@@ -114,8 +120,8 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           <summary aria-label="Menüyü aç"><MenuIcon /></summary>
           <nav aria-label="Mobil menü">
             <Link className={styles.mobileTopLink} href="/">Ana Sayfa</Link>
-            <MobileDropdown label="Hizmetlerimiz" links={serviceLinks} />
-            <MobileDropdown label="Hizmet Bölgelerimiz" links={regionLinks} />
+            <MobileDropdown label="Hizmetlerimiz" overviewHref="/hizmetlerimiz" links={serviceLinks} />
+            <MobileDropdown label="Hizmet Bölgelerimiz" overviewHref="/hizmet-bolgeleri" links={regionLinks} />
             <Link className={styles.mobileTopLink} href="/kurumsal">Kurumsal</Link>
             <Link className={styles.mobileTopLink} href="/iletisim">Bize Ulaşın</Link>
             <a className={styles.mobileContactLink} href={siteContact.phoneHref}>
