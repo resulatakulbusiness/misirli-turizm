@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { listLocalCmsPages } from "@/lib/cms-content";
 import { absoluteUrl } from "@/lib/site-url";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     { path: "/", changeFrequency: "weekly" as const, priority: 1 },
     { path: "/personel-tasimaciligi", changeFrequency: "monthly" as const, priority: 0.9 },
@@ -18,10 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/iletisim", changeFrequency: "monthly" as const, priority: 0.7 },
   ];
 
-  return routes.map((route) => ({
+  const managedPages = (await listLocalCmsPages())
+    .filter((page) => page.status === "published")
+    .map((page) => ({
+      url: absoluteUrl(`/${page.path}`),
+      lastModified: page.updatedAt,
+      changeFrequency: "monthly" as const,
+      priority: page.contentType === "service" || page.contentType === "region" ? 0.8 : 0.7,
+    }));
+
+  return [...routes.map((route) => ({
     url: absoluteUrl(route.path),
     lastModified: new Date(),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
-  }));
+  })), ...managedPages];
 }

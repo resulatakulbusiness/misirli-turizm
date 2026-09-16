@@ -39,6 +39,7 @@ npm run build
 - [Üretim akışı](docs/MISIRLI-FLOWCHART.md)
 - [Rakip ve SERP DNA özeti](docs/MISIRLI-RAKIP-DNA.md)
 - [Pillar / cluster içerik mimarisi](docs/MISIRLI-PILLAR-CLUSTER.md)
+- [Yönetim paneli ve yayın akışı](docs/MISIRLI-CMS.md)
 
 ## Yayın
 
