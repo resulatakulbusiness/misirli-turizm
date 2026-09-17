@@ -156,6 +156,8 @@
   left: 50%;
   display: grid;
   width: 310px;
+  max-height: calc(100vh - var(--header-height) - 18px);
+  overflow-y: auto;
   padding: 12px;
   border: 1px solid #dfe5eb;
   border-radius: 17px;

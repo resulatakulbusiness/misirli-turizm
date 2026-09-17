@@ -11,6 +11,10 @@ type NavItem = { label: string; href: string; indent?: boolean };
 const serviceLinks: NavItem[] = [
   { label: "Tüm Hizmetlerimiz", href: "/hizmetlerimiz" },
   { label: "Sektörel Çözümler", href: "/sektorler" },
+  { label: "Lojistik ve Depo", href: "/sektorler/lojistik-depo-personel-servisi", indent: true },
+  { label: "Sağlık ve Hastane", href: "/sektorler/saglik-hastane-personel-servisi", indent: true },
+  { label: "Ofis ve Plaza", href: "/sektorler/ofis-plaza-personel-servisi", indent: true },
+  { label: "AVM ve Perakende", href: "/sektorler/avm-perakende-personel-servisi", indent: true },
   { label: "Kurumsal Personel Taşımacılığı", href: "/personel-tasimaciligi" },
   { label: "Vardiyalı Personel Servisi", href: "/vardiyali-personel-servisi" },
   { label: "Fabrika Personel Taşımacılığı", href: "/fabrika-personel-tasimaciligi" },
