@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { type ChangeEvent, type FormEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
+import { SiteLink } from "@/components/site-link";
 import type { CmsFaq, CmsMedia, CmsPage, CmsSection } from "@/lib/cms-types";
 import { createEmptyCmsPage, normalizeCmsPath } from "@/lib/cms-types";
 import styles from "./management.module.css";
@@ -192,7 +193,7 @@ export function AdminPanel({ authenticated, configuration }: { authenticated: bo
       <aside className={`${styles.sidebar} ${mobileNav ? styles.sidebarOpen : ""}`}>
         <div className={styles.adminLogo}><span>M</span><div><strong>MISIRLI</strong><small>TURİZM</small></div></div>
         <nav>{navItems.map((item) => <button key={item.view} className={view === item.view ? styles.activeNav : ""} onClick={() => item.view === "editor" ? newPage() : navigate(item.view)}><Icon name={item.icon}/>{item.label}</button>)}</nav>
-        <div className={styles.sidebarBottom}><a href="/" target="_blank" rel="noopener noreferrer"><Icon name="external"/>Siteyi görüntüle</a><button onClick={logout}><Icon name="logout"/>Oturumu kapat</button></div>
+        <div className={styles.sidebarBottom}><SiteLink href="/"><Icon name="external"/>Siteyi görüntüle</SiteLink><button onClick={logout}><Icon name="logout"/>Oturumu kapat</button></div>
       </aside>
 
       <div className={styles.workspace}>
