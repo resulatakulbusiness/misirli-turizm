@@ -10,6 +10,7 @@ type NavItem = { label: string; href: string; indent?: boolean };
 
 const serviceLinks: NavItem[] = [
   { label: "Tüm Hizmetlerimiz", href: "/hizmetlerimiz" },
+  { label: "Sektörel Çözümler", href: "/sektorler" },
   { label: "Kurumsal Personel Taşımacılığı", href: "/personel-tasimaciligi" },
   { label: "Vardiyalı Personel Servisi", href: "/vardiyali-personel-servisi" },
   { label: "Fabrika Personel Taşımacılığı", href: "/fabrika-personel-tasimaciligi" },

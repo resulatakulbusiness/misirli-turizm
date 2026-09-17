@@ -25,6 +25,11 @@ export function SiteFooter() {
           <Link href="/vardiyali-personel-servisi">Vardiyalı Personel Servisi</Link>
           <Link href="/fabrika-personel-tasimaciligi">Fabrika Personel Servisi</Link>
           <Link href="/personel-servisi-fiyatlari">Personel Servisi Fiyatları</Link>
+          <Link href="/sektorler">Sektörel Çözümler</Link>
+          <Link href="/sektorler/lojistik-depo-personel-servisi">Lojistik ve Depo</Link>
+          <Link href="/sektorler/saglik-hastane-personel-servisi">Sağlık ve Hastane</Link>
+          <Link href="/sektorler/ofis-plaza-personel-servisi">Ofis ve Plaza</Link>
+          <Link href="/sektorler/avm-perakende-personel-servisi">AVM ve Perakende</Link>
           <Link href="/hizmet-bolgeleri">Hizmet Bölgeleri</Link>
           <Link href="/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi">Avrupa Yakası</Link>
           <Link href="/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi">Anadolu Yakası</Link>

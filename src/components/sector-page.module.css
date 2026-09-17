@@ -1,0 +1,892 @@
+.page {
+  --sector-accent: var(--color-orange);
+  --sector-accent-soft: rgb(244 122 0 / 14%);
+  --sector-glow: rgb(244 122 0 / 24%);
+  background: var(--color-canvas);
+}
+
+.page[data-sector-theme="health"] {
+  --sector-accent: var(--color-blue-bright);
+  --sector-accent-soft: rgb(45 140 255 / 13%);
+  --sector-glow: rgb(45 140 255 / 24%);
+}
+
+.page[data-sector-theme="office"] {
+  --sector-accent: #66a9ed;
+  --sector-accent-soft: rgb(102 169 237 / 13%);
+  --sector-glow: rgb(102 169 237 / 22%);
+}
+
+.page[data-sector-theme="retail"] {
+  --sector-accent: #ff8d2b;
+  --sector-accent-soft: rgb(255 141 43 / 14%);
+  --sector-glow: rgb(255 141 43 / 24%);
+}
+
+.container {
+  width: min(var(--container), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 150px 0 86px;
+  background:
+    radial-gradient(circle at 72% 22%, var(--sector-glow), transparent 28%),
+    linear-gradient(135deg, #111923 0%, #202b36 52%, #151d26 100%);
+  color: white;
+}
+
+.hero::after {
+  position: absolute;
+  z-index: -1;
+  inset: auto auto -190px -140px;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 62px rgb(255 255 255 / 2%), 0 0 0 124px rgb(255 255 255 / 2%);
+  content: "";
+}
+
+.heroGrid {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 10%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 10%) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to right, black, transparent 78%);
+}
+
+.heroLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(470px, 1.1fr);
+  gap: 62px;
+  align-items: center;
+}
+
+.heroContent {
+  animation: sector-rise 720ms ease-out both;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 36px;
+  color: rgb(255 255 255 / 58%);
+  font-size: 0.77rem;
+}
+
+.breadcrumbs a:hover {
+  color: white;
+}
+
+.eyebrow,
+.sectionHeading > div:first-child > span,
+.operationsIntro > span,
+.decisionHeader > div:first-child > span,
+.scenarioTitle > span,
+.procurementCopy > span,
+.faqIntro > span,
+.relatedHeading > div > span,
+.conversionCard > div:first-child > span {
+  display: block;
+  color: var(--sector-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 18px 0 24px;
+  font-size: clamp(2.7rem, 5.3vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--sector-accent);
+}
+
+.heroLead {
+  max-width: 720px;
+  margin: 0;
+  color: rgb(255 255 255 / 76%);
+  font-size: clamp(1rem, 1.35vw, 1.16rem);
+  line-height: 1.78;
+}
+
+.heroLead strong,
+.conversionCard strong {
+  color: white;
+  font-weight: 800;
+}
+
+.heroActions,
+.conversionActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.primaryButton,
+.secondaryButton,
+.conversionActions a {
+  display: inline-flex;
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.83rem;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.primaryButton,
+.conversionActions a:first-child {
+  background: var(--sector-accent);
+  color: #101820;
+}
+
+.secondaryButton,
+.conversionActions a:last-child {
+  border: 1px solid rgb(255 255 255 / 22%);
+  color: white;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.conversionActions a:hover {
+  transform: translateY(-2px);
+}
+
+.primaryButton svg,
+.operationsIntro a svg,
+.relatedHeading > a svg,
+.relatedGrid b svg,
+.checklist > a svg,
+.conversionActions svg {
+  width: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.heroTags span {
+  padding: 8px 11px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 5%);
+  color: rgb(255 255 255 / 68%);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 590px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 30px 30px 80px 30px;
+  box-shadow: 0 34px 90px rgb(0 0 0 / 40%);
+  animation: sector-rise 760ms 100ms ease-out both;
+}
+
+.heroVisual > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(7 12 18 / 88%) 0%, transparent 46%);
+}
+
+.imageCaption {
+  position: absolute;
+  right: 34px;
+  bottom: 104px;
+  left: 34px;
+}
+
+.imageCaption span {
+  color: var(--sector-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.imageCaption p {
+  max-width: 480px;
+  margin: 9px 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.livePlan {
+  position: absolute;
+  right: 26px;
+  bottom: 26px;
+  left: 26px;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 15px 17px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 15px;
+  background: rgb(15 23 32 / 76%);
+  backdrop-filter: blur(14px);
+}
+
+.livePlan span {
+  color: var(--sector-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.livePlan p {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.livePlan i {
+  height: 1px;
+  background: linear-gradient(90deg, var(--sector-accent), rgb(255 255 255 / 12%));
+}
+
+.pageNav {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  border-bottom: 1px solid var(--color-line);
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(16px);
+}
+
+.pageNav > div {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pageNav a {
+  flex: 0 0 auto;
+  padding: 18px 0 15px;
+  border-bottom: 3px solid transparent;
+  color: var(--color-ink-soft);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.pageNav a:hover {
+  border-color: var(--sector-accent);
+  color: var(--color-ink);
+}
+
+.introSection,
+.operationsSection,
+.decisionSection,
+.scenarioSection,
+.procurementSection,
+.faqSection,
+.relatedSection {
+  scroll-margin-top: 78px;
+  padding: 110px 0;
+}
+
+.sectionHeading,
+.decisionHeader,
+.relatedHeading {
+  display: grid;
+  grid-template-columns: 0.84fr 1.16fr;
+  gap: 76px;
+  align-items: start;
+}
+
+.sectionHeading h2,
+.operationsIntro h2,
+.decisionHeader h2,
+.scenarioTitle h2,
+.procurementCopy h2,
+.faqIntro h2,
+.relatedHeading h2,
+.conversionCard h2 {
+  margin: 14px 0 0;
+  color: var(--color-charcoal);
+  font-size: clamp(2rem, 3.4vw, 3.65rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.richCopy p,
+.operationsIntro > p,
+.decisionHeader > div:last-child p,
+.scenarioTitle > p,
+.procurementCopy > p {
+  margin: 0 0 18px;
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: 1.84;
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 58px;
+}
+
+.signalGrid article,
+.decisionGrid article,
+.scenarioCards article {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 14px 38px rgb(24 34 44 / 6%);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.signalGrid article {
+  min-height: 300px;
+  padding: 27px;
+}
+
+.signalGrid article::after {
+  position: absolute;
+  right: -48px;
+  bottom: -48px;
+  width: 128px;
+  height: 128px;
+  border: 22px solid var(--sector-accent-soft);
+  border-radius: 50%;
+  content: "";
+}
+
+.signalGrid article:hover,
+.decisionGrid article:hover,
+.scenarioCards article:hover {
+  transform: translateY(-6px);
+  border-color: var(--sector-accent);
+  box-shadow: 0 22px 54px rgb(24 34 44 / 11%);
+}
+
+.signalGrid article > span {
+  color: var(--sector-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.signalGrid h3,
+.decisionGrid h3,
+.scenarioCards h3,
+.relatedGrid h3 {
+  margin: 45px 0 13px;
+  color: var(--color-charcoal);
+  font-size: 1.14rem;
+  line-height: 1.25;
+}
+
+.signalGrid p,
+.decisionGrid p,
+.scenarioCards p,
+.relatedGrid p {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.72;
+}
+
+.operationsSection {
+  background: white;
+}
+
+.operationsLayout,
+.procurementLayout,
+.faqLayout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 78px;
+}
+
+.operationsIntro {
+  position: sticky;
+  top: 112px;
+  align-self: start;
+}
+
+.operationsIntro a,
+.checklist > a,
+.relatedHeading > a,
+.relatedGrid b {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-blue);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.operationsIntro a {
+  margin-top: 12px;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 20px;
+  min-height: 178px;
+  padding: 25px;
+  border: 1px solid var(--color-line);
+  border-radius: 22px;
+  background: linear-gradient(135deg, white, #f8fafc);
+}
+
+.timeline li > span {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  place-items: center;
+  background: var(--sector-accent-soft);
+  color: var(--sector-accent);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.timeline h3 {
+  margin: 6px 0 10px;
+  color: var(--color-charcoal);
+  font-size: 1.05rem;
+}
+
+.timeline p {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
+
+.decisionSection {
+  background: linear-gradient(180deg, #18222d, #202b36);
+  color: white;
+}
+
+.decisionHeader h2,
+.conversionCard h2 {
+  color: white;
+}
+
+.decisionHeader > div:last-child p {
+  color: rgb(255 255 255 / 70%);
+}
+
+.decisionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 56px;
+}
+
+.decisionGrid article {
+  min-height: 290px;
+  padding: 26px;
+  border-color: rgb(255 255 255 / 10%);
+  background: rgb(255 255 255 / 5%);
+  box-shadow: none;
+}
+
+.decisionGrid article > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.decisionGrid article > div span,
+.scenarioCards article > span {
+  color: var(--sector-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.decisionGrid article > div i {
+  color: rgb(255 255 255 / 28%);
+  font-size: 0.76rem;
+  font-style: normal;
+}
+
+.decisionGrid h3 {
+  margin-top: 54px;
+  color: white;
+}
+
+.decisionGrid p {
+  color: rgb(255 255 255 / 68%);
+}
+
+.decisionGrid .decisionFeatured {
+  grid-row: span 2;
+  min-height: 595px;
+  background:
+    radial-gradient(circle at 75% 88%, var(--sector-glow), transparent 34%),
+    rgb(255 255 255 / 7%);
+}
+
+.decisionFeatured h3 {
+  margin-top: 190px;
+  font-size: 1.55rem;
+}
+
+.scenarioSection {
+  background: #eef2f6;
+}
+
+.scenarioLayout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 62px;
+}
+
+.scenarioCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.scenarioCards article {
+  min-height: 275px;
+  padding: 26px;
+}
+
+.scenarioCards h3 {
+  margin-top: 48px;
+}
+
+.procurementSection {
+  background: white;
+}
+
+.checklist {
+  display: grid;
+  gap: 11px;
+  align-content: start;
+  padding: 30px;
+  border: 1px solid var(--color-line);
+  border-radius: 28px;
+  background: #f8fafc;
+}
+
+.checklist > div {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.checklist svg {
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 9px;
+  background: var(--sector-accent-soft);
+  fill: none;
+  stroke: var(--sector-accent);
+  stroke-width: 2;
+}
+
+.checklist > a {
+  margin-top: 14px;
+}
+
+.conversionSection {
+  padding: 30px 0 110px;
+  background: white;
+}
+
+.conversionCard {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: end;
+  padding: 58px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 88% 12%, var(--sector-glow), transparent 24%),
+    linear-gradient(135deg, #16202a, #283440);
+  color: white;
+}
+
+.conversionCard p {
+  max-width: 760px;
+  margin: 20px 0 0;
+  color: rgb(255 255 255 / 72%);
+  line-height: 1.78;
+}
+
+.conversionActions {
+  justify-content: flex-end;
+}
+
+.faqSection {
+  background: var(--color-canvas);
+}
+
+.faqIntro {
+  position: sticky;
+  top: 112px;
+  align-self: start;
+}
+
+.faqIntro p {
+  margin: 20px 0 0;
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+}
+
+.faqList {
+  display: grid;
+  gap: 10px;
+}
+
+.faqList details {
+  border: 1px solid var(--color-line);
+  border-radius: 18px;
+  background: white;
+}
+
+.faqList summary {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 22px;
+  color: var(--color-charcoal);
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faqList summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqList summary span {
+  color: var(--sector-accent);
+  font-size: 0.72rem;
+}
+
+.faqList details p {
+  margin: 0;
+  padding: 0 22px 22px 72px;
+  color: var(--color-ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.relatedSection {
+  background: white;
+}
+
+.relatedHeading {
+  align-items: end;
+}
+
+.relatedHeading > a {
+  justify-self: end;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  margin-top: 52px;
+}
+
+.relatedGrid > a {
+  overflow: hidden;
+  padding: 10px 10px 26px;
+  border: 1px solid var(--color-line);
+  border-radius: 24px;
+  background: white;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.relatedGrid > a:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.relatedImage {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.relatedImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.relatedGrid > a:hover img {
+  transform: scale(1.04);
+}
+
+.relatedGrid > a > span,
+.relatedGrid h3,
+.relatedGrid p,
+.relatedGrid b {
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.relatedGrid > a > span {
+  display: block;
+  margin-top: 22px;
+  color: var(--sector-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.relatedGrid h3 {
+  margin-top: 10px;
+}
+
+.relatedGrid b {
+  margin-top: 20px;
+}
+
+@keyframes sector-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1050px) {
+  .heroLayout,
+  .sectionHeading,
+  .decisionHeader,
+  .operationsLayout,
+  .procurementLayout,
+  .faqLayout,
+  .scenarioLayout,
+  .conversionCard {
+    grid-template-columns: 1fr;
+  }
+
+  .heroVisual { min-height: 520px; }
+  .operationsIntro,
+  .faqIntro { position: static; }
+  .signalGrid { grid-template-columns: repeat(2, 1fr); }
+  .decisionGrid { grid-template-columns: 1fr 1fr; }
+  .decisionGrid .decisionFeatured { grid-row: auto; min-height: 290px; }
+  .decisionFeatured h3 { margin-top: 54px; font-size: 1.14rem; }
+  .relatedHeading > a { justify-self: start; }
+  .conversionActions { justify-content: flex-start; }
+}
+
+@media (max-width: 760px) {
+  .container { width: min(100% - 28px, var(--container)); }
+  .hero { padding: 122px 0 58px; }
+  .heroLayout { gap: 38px; }
+  .hero h1 { font-size: clamp(2.45rem, 13vw, 4rem); }
+  .heroVisual { min-height: 470px; border-radius: 24px 24px 56px 24px; }
+  .imageCaption { right: 22px; bottom: 104px; left: 22px; }
+  .livePlan { right: 14px; bottom: 14px; left: 14px; grid-template-columns: auto 1fr auto 1fr auto 1fr; }
+  .livePlan i { display: none; }
+  .pageNav { top: 0; }
+  .pageNav > div { gap: 20px; }
+  .introSection,
+  .operationsSection,
+  .decisionSection,
+  .scenarioSection,
+  .procurementSection,
+  .faqSection,
+  .relatedSection { padding: 78px 0; }
+  .sectionHeading,
+  .decisionHeader { gap: 28px; }
+  .signalGrid,
+  .decisionGrid,
+  .scenarioCards,
+  .relatedGrid { grid-template-columns: 1fr; }
+  .signalGrid article,
+  .decisionGrid article,
+  .scenarioCards article { min-height: auto; }
+  .operationsLayout,
+  .faqLayout,
+  .scenarioLayout { gap: 42px; }
+  .timeline li { grid-template-columns: 46px 1fr; padding: 20px; }
+  .timeline li > span { width: 42px; height: 42px; }
+  .conversionSection { padding-bottom: 78px; }
+  .conversionCard { padding: 34px 24px; border-radius: 24px; }
+  .conversionActions { align-items: stretch; flex-direction: column; }
+  .faqList details p { padding-left: 22px; }
+}
+
+@media (max-width: 480px) {
+  .heroActions { align-items: stretch; flex-direction: column; }
+  .primaryButton,
+  .secondaryButton { width: 100%; }
+  .heroVisual { min-height: 430px; }
+  .imageCaption p { font-size: 1rem; }
+  .livePlan p { font-size: 0.62rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent,
+  .heroVisual { animation: none; }
+  .signalGrid article,
+  .decisionGrid article,
+  .scenarioCards article,
+  .relatedGrid > a,
+  .relatedImage img { transition: none; }
+}
