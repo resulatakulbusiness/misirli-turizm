@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
@@ -69,7 +70,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="tr" className={`${manrope.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        <ScrollToTop />
+        {children}
+      </body>
     </html>
   );
 }
