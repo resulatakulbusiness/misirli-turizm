@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import brandLogo from "../../public/brand/misirli-turizm-logo.png";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
@@ -24,6 +25,7 @@ type TextCard = {
 export type RegionLandingPageData = {
   slug: string;
   side: string;
+  province?: string;
   eyebrow: string;
   title: string;
   accent: string;
@@ -112,7 +114,7 @@ export function RegionLandingPage({ data }: { data: RegionLandingPageData }) {
           telephone: siteContact.phoneE164,
           email: siteContact.email,
         },
-        areaServed: { "@type": "AdministrativeArea", name: `${data.side}, İstanbul` },
+        areaServed: { "@type": "AdministrativeArea", name: `${data.side}, ${data.province ?? "İstanbul"}` },
         audience: { "@type": "BusinessAudience", audienceType: "İşletmeler" },
         description: data.schemaDescription,
       },
@@ -158,6 +160,9 @@ export function RegionLandingPage({ data }: { data: RegionLandingPageData }) {
             </div>
             <figure className={styles.heroVisual}>
               <Image src={data.image} alt={data.imageAlt} priority sizes="(max-width: 960px) 92vw, 48vw" />
+              <span className={styles.brandBadge} aria-hidden="true">
+                <Image src={brandLogo} alt="" />
+              </span>
               <figcaption><span>{data.side}</span><strong>Personel · Vardiya · Durak · Tesis</strong></figcaption>
               <div className={styles.liveRoute} aria-hidden="true"><i /><i /><i /><i /></div>
             </figure>
