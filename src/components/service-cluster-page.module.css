@@ -196,6 +196,26 @@
   box-shadow: 0 34px 90px rgb(5 13 20 / 36%);
 }
 
+.brandBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 10px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 10px 26px rgb(0 0 0 / 22%);
+}
+
+.brandBadge img {
+  display: block;
+  width: 96px;
+  height: auto;
+}
+
 .heroVisual figcaption {
   position: absolute;
   right: 26px;
@@ -815,6 +835,16 @@
 
   .heroVisual figcaption {
     bottom: 78px;
+  }
+
+  .brandBadge {
+    top: 14px;
+    right: 14px;
+    padding: 7px 10px;
+  }
+
+  .brandBadge img {
+    width: 74px;
   }
 
   .visualBadge {
