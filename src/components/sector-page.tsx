@@ -1,4 +1,5 @@
 import Image from "next/image";
+import brandLogo from "../../public/brand/misirli-turizm-logo.png";
 import { absoluteUrl, siteUrl } from "@/lib/site-url";
 import { siteContact } from "@/lib/site-contact";
 import type { SectorPageData } from "@/lib/sector-pages";
@@ -136,6 +137,9 @@ export function SectorPage({ data }: { data: SectorPageData }) {
                 priority
                 sizes="(max-width: 980px) 94vw, 48vw"
               />
+              <span className={styles.brandBadge} aria-hidden="true">
+                <Image src={brandLogo} alt="" />
+              </span>
               <div className={styles.imageShade} aria-hidden="true" />
               <div className={styles.imageCaption}>
                 <span>Mısırlı Turizm · sektörel planlama</span>
