@@ -50,7 +50,7 @@ const data: DistrictPageData = {
         230 parsel üzerine kurulu olup bugün 88’in üzerinde firmayı barındırmaktadır. Bölgede
         yaklaşık 9.500 kişi istihdam edilmekte, tam doluluğa ulaşıldığında bu rakamın 45 bin
         kişiye çıkması hedeflenmektedir. Bu ölçek, <strong>GOSB personel taşımacılığı</strong>
-        planında vardiya çakışmalarının, parsel yönlünün ve giriş kapısının ayrrı
+        planında vardiya çakışmalarının, parsel yönünün ve giriş kapısının ayrı
         değerlendirilmesini gerektirir.
       </p>
     ),
@@ -86,7 +86,7 @@ const data: DistrictPageData = {
         text: (
           <p>
             Üretim ve lojistik tesislerinde çok vardiyalı çalışma yaygındır; servis varış
-            toleransı ile vardiya değiȅ�im saati birlikte hesaplanır.
+            toleransı ile vardiya değişim saati birlikte hesaplanır.
           </p>
         ),
       },
@@ -107,7 +107,7 @@ const data: DistrictPageData = {
     lead: (
       <p>
         Aşağıdaki bölgeler kesin ve sabit güzergâh vaadi değildir. <strong>Gebze personel
-        servisi güvergâhı</strong>, çalışanların gerçek dağılımı ve tesis yönü doğrulandıktan
+        servisi güzergâhı</strong>, çalışanların gerçek dağılımı ve tesis yönü doğrulandıktan
         sonra bu yerel kümeler üzerinden değerlendirilir.
       </p>
     ),
@@ -147,7 +147,7 @@ const data: DistrictPageData = {
       },
       {
         label: "Kocaeli bağlantısı",
-        title: "Dilovası ve Çayırova yönlü",
+        title: "Dilovası ve Çayırova yönü",
         text: (
           <p>
             Gebze’ye komşu ilçelerden gelen personel yoğunluğu yeterliyse ayrı veya bağlantılı
@@ -158,10 +158,10 @@ const data: DistrictPageData = {
       },
       {
         label: "İstanbul bağlantısı",
-        title: "Tuzla ve Pendik yönlü",
+        title: "Tuzla ve Pendik yönü",
         text: (
           <p>
-            İstanbul Anadolu Yakası'ndan Gebze’deki tesislere çalışan getiren işletmeler için
+            İstanbul Anadolu Yakası’ndan Gebze’deki tesislere çalışan getiren işletmeler için
             il sınırını aşan hat senaryoları ayrıca değerlendirilir.
           </p>
         ),
@@ -181,7 +181,7 @@ const data: DistrictPageData = {
       </p>
     ),
     points: [
-      "Personel noktalarını tesis yöncüne göre bölgesel kümelere ayırma",
+      "Personel noktalarını tesis yönüne göre bölgesel kümelere ayırma",
       "Güvenli ve erişilebilir duraklarla mahalle içi dolaşımı dengeleme",
       "Vardiya öncesinde gerçekçi varış tamponu oluşturma",
       "GOSB kapısı, iç yol ve indirme noktasını rota hesabına katma",
@@ -199,10 +199,10 @@ const data: DistrictPageData = {
       </p>
     ),
     steps: [
-      { title: "Tesis ve vardiya verisini netleştirme", text: <p>İşyeri konumu, kapı erişimi, çalışma günleri, vardiya giriş–çımışları ve erken varış ihtiyacı alınır.</p> },
+      { title: "Tesis ve vardiya verisini netleştirme", text: <p>İşyeri konumu, kapı erişimi, çalışma günleri, vardiya giriş–çıkışları ve erken varış ihtiyacı alınır.</p> },
       { title: "Personel bölgelerini kümeleme", text: <p>Çalışanların genel konumları; Gebze içi ve çevre ilçe yönleri bakımından güvenli durak gruplarına ayrılır.</p> },
       { title: "Hat, süre ve kapasiteyi karşılaştırma", text: <p>Alternatif durak sıraları, trafik penceresi, tahmini yolculuk süresi ve araç doluluğu aynı tabloda incelenir.</p> },
-      { title: "Saha bağlangıcı ve iyileştirme", text: <p>Onaylanan plan sahada gözlenir; personel, vardiya veya tesis koşulu değiştiğinde ilgili hat yeniden değerlendirilir.</p> },
+      { title: "Saha başlangıcı ve iyileştirme", text: <p>Onaylanan plan sahada gözlenir; personel, vardiya veya tesis koşulu değiştiğinde ilgili hat yeniden değerlendirilir.</p> },
     ],
   },
   pricing: {
@@ -220,13 +220,13 @@ const data: DistrictPageData = {
       "Personel bölgelerinin dağılımı ve durak sayısı",
       "Vardiya, sefer ve çalışma günü adedi",
       "GOSB içi erişim ve bekleme koşulları",
-      "Hat başında gerekli araç kapasitesi",
+      "Hat bazında gerekli araç kapasitesi",
       "TEM otoyolu, ağır vasıta yoğunluğu veya özel saha ihtiyacı",
     ],
   },
   faqs: [
     { question: "Gebze personel servisi nasıl planlanır?", answer: "Önce tesis konumu ve vardiya saatleri alınır. Çalışanların genel ikamet bölgeleri güvenli durak kümelerine ayrılır; alternatif güzergâh, süre ve kapasite seçenekleri karşılaştırıldıktan sonra saha planı oluşturulur." },
-    { question: "GOSB için vardiyalı personel servisi kurulabilir mi?", answer: "Evet. Sanayi ve lojistik tesislerinde yaygın olan çok vardiyalı düzenler için sabah, akşam ve gece giriş-çıkış saatleri ayrı değerlendirilir." },
+    { question: "GOSB için vardiyalı personel servisi kurulabilir mi?", answer: "Evet. Sanayi ve lojistik tesislerinde yaygın olan çok vardiyalı düzenler için sabah, akşam ve gece giriş–çıkış saatleri ayrı değerlendirilir." },
     { question: "Dilovası’ndan Gebze’deki tesise personel servisi planlanabilir mi?", answer: "Personel yoğunluğu, durak erişimi, vardiya saati ve tesis yönü uygun olduğunda Dilovası–Gebze aksı için hat senaryosu değerlendirilebilir." },
     { question: "İstanbul’dan Gebze’ye personel taşınabilir mi?", answer: "Tuzla ve Pendik gibi komşu bölgelerden yeterli personel yoğunluğu varsa il sınırını aşan hat seçenekleri değerlendirilebilir; kesin güzergâh çalışan konumları görülmeden belirlenmez." },
     { question: "Gebze personel servisi fiyatı nasıl hesaplanır?", answer: "Fiyat; toplam mesafe, durak sayısı, vardiya ve sefer adedi, çalışma günleri, araç kapasitesi, bekleme süresi ve GOSB’ye özel erişim koşullarına göre hazırlanır." },
