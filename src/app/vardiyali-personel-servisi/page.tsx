@@ -158,6 +158,8 @@ const data: ServiceClusterData = {
     { href: "/personel-tasimaciligi", label: "Ana hizmet", title: "İstanbul kurumsal personel taşımacılığı" },
     { href: "/fabrika-personel-tasimaciligi", label: "Tesis senaryosu", title: "Fabrika personel taşımacılığı" },
     { href: "/kurumsal-servis-guzergah-planlama", label: "Planlama", title: "Servis güzergâh ve durak planlama" },
+    { href: "/27-1-personel-servisi", label: "Kapasite", title: "27+1 personel servisi" },
+    { href: "/hizmet-bolgeleri/kocaeli-personel-servisi", label: "Bölge", title: "Kocaeli personel servisi" },
   ],
 };
 
