@@ -158,6 +158,7 @@ const data: ServiceClusterData = {
     { href: "/personel-tasimaciligi", label: "Ana hizmet", title: "İstanbul kurumsal personel taşımacılığı" },
     { href: "/vardiyali-personel-servisi", label: "Vardiya modeli", title: "Vardiyalı personel servisi" },
     { href: "/personel-servisi-fiyatlari", label: "Ticari araştırma", title: "Personel servisi fiyatını belirleyenler" },
+    { href: "/hizmet-bolgeleri/kocaeli-personel-servisi", label: "Bölge", title: "Kocaeli personel servisi" },
   ],
 };
 
