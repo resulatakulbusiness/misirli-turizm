@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SiteLink as Link } from "@/components/site-link";
 import serviceImage from "../../../public/images/misirli-turizm-kurumsal-personel-servisi.webp";
+import brandLogo from "../../../public/brand/misirli-turizm-logo.png";
 import { MobileCta } from "@/components/mobile-cta";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -345,6 +346,9 @@ export default function PersonnelTransportationPage() {
                   priority
                   sizes="(max-width: 920px) 90vw, 520px"
                 />
+                <span className={styles.brandBadge} aria-hidden="true">
+                  <Image src={brandLogo} alt="" />
+                </span>
                 <div className={styles.imageShade} />
                 <div className={styles.imageCaption}>
                   <span>Planın odağı</span>
