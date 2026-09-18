@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import brandLogo from "../../public/brand/misirli-turizm-logo.png";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
@@ -94,7 +95,7 @@ export function OverviewPage({ data }: { data: OverviewPageData }) {
               <div className={styles.keywords}>{data.keywords.map((keyword) => <strong key={keyword}>{keyword}</strong>)}</div>
             </div>
             <div className={styles.visualGrid}>
-              <figure><Image src={data.image} alt={data.imageAlt} priority sizes="(max-width: 900px) 88vw, 41vw" /></figure>
+              <figure><Image src={data.image} alt={data.imageAlt} priority sizes="(max-width: 900px) 88vw, 41vw" /><span className={styles.brandBadge} aria-hidden="true"><Image src={brandLogo} alt="" /></span></figure>
               <figure><Image src={data.secondaryImage} alt={data.secondaryImageAlt} sizes="(max-width: 900px) 42vw, 20vw" /></figure>
               <div><span>Mısırlı yaklaşımı</span><strong>Veri → Plan → Saha → Kontrol</strong></div>
             </div>
