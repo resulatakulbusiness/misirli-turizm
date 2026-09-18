@@ -10,6 +10,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/kurumsal", changeFrequency: "monthly" as const, priority: 0.75 },
     { path: "/vardiyali-personel-servisi", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/fabrika-personel-tasimaciligi", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/vip-personel-servisi", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/27-1-personel-servisi", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/kurumsal-servis-guzergah-planlama", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/personel-servisi-fiyatlari", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/sektorler", changeFrequency: "monthly" as const, priority: 0.85 },
@@ -21,6 +23,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/hizmet-bolgeleri/basaksehir-personel-servisi", changeFrequency: "monthly" as const, priority: 0.75 },
     { path: "/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi", changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/hizmet-bolgeleri/kocaeli-personel-servisi", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/hizmet-bolgeleri/dilovasi-personel-servisi", changeFrequency: "monthly" as const, priority: 0.75 },
+    { path: "/hizmet-bolgeleri/gebze-personel-servisi", changeFrequency: "monthly" as const, priority: 0.75 },
     { path: "/iletisim", changeFrequency: "monthly" as const, priority: 0.7 },
   ];
 
