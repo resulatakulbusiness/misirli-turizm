@@ -193,6 +193,26 @@
   box-shadow: var(--shadow-strong);
 }
 
+.brandBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 10px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 10px 26px rgb(0 0 0 / 22%);
+}
+
+.imageFrame .brandBadge img {
+  display: block;
+  width: 96px;
+  height: auto;
+}
+
 .imageFrame img {
   width: 100%;
   height: 100%;
@@ -961,6 +981,16 @@
   .imageFrame {
     aspect-ratio: 0.94;
     border-radius: 22px;
+  }
+
+  .brandBadge {
+    top: 14px;
+    right: 14px;
+    padding: 7px 10px;
+  }
+
+  .imageFrame .brandBadge img {
+    width: 74px;
   }
 
   .routeCard {
