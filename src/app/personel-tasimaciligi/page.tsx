@@ -179,9 +179,21 @@ const serviceClusters = [
     href: "/personel-servisi-fiyatlari",
   },
   {
-    label: "İstanbul",
+    label: "Kapasite",
+    title: "Özel VIP personel servisi",
+    text: "Yönetici ve misafir taşımacılığında konfor, mahremiyet ve kurumsal imajın öne çıktığı VIP servis modelini inceleyin.",
+    href: "/vip-personel-servisi",
+  },
+  {
+    label: "Kapasite",
+    title: "27+1 personel servisi",
+    text: "Orta ölçekli ekipler için 27+1 kapasiteli araçların planlama ve maliyet avantajını görün.",
+    href: "/27-1-personel-servisi",
+  },
+  {
+    label: "İstanbul · Kocaeli",
     title: "Personel servisi hizmet bölgeleri",
-    text: "Avrupa ve Anadolu Yakası için bölge kümelerini ve ilçe bazlı içerik mimarisini inceleyin.",
+    text: "Avrupa Yakası, Anadolu Yakası ve Kocaeli için bölge kümelerini ve ilçe bazlı içerik mimarisini inceleyin.",
     href: "/hizmet-bolgeleri",
   },
 ];
