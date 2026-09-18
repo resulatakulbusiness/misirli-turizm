@@ -19,19 +19,19 @@ type RegionCluster = {
 };
 
 export const metadata: Metadata = {
-  title: "İstanbul Personel Servisi Hizmet Bölgeleri | Mısırlı",
+  title: "İstanbul ve Kocaeli Personel Servisi Hizmet Bölgeleri | Mısırlı",
   description:
-    "İstanbul Avrupa ve Anadolu Yakası personel servisi planlama bölgelerini; tesis yönü, vardiya, durak ve çalışan dağılımıyla birlikte inceleyin.",
+    "İstanbul Avrupa ve Anadolu Yakası ile Kocaeli (Dilovası, Gebze) personel servisi planlama bölgelerini; tesis yönü, vardiya, durak ve çalışan dağılımıyla birlikte inceleyin.",
   alternates: { canonical: "/hizmet-bolgeleri" },
   openGraph: {
-    title: "İstanbul Personel Servisi Hizmet Bölgeleri | Mısırlı",
-    description: "Avrupa ve Anadolu Yakası için bölge, vardiya ve güzergâh odaklı personel servisi planlama yaklaşımı.",
+    title: "İstanbul ve Kocaeli Personel Servisi Hizmet Bölgeleri | Mısırlı",
+    description: "Avrupa Yakası, Anadolu Yakası ve Kocaeli için bölge, vardiya ve güzergâh odaklı personel servisi planlama yaklaşımı.",
     url: "/hizmet-bolgeleri",
     images: [{
       url: "/images/hero-kurumsal-ofis-servisi.webp",
       width: 1920,
       height: 1080,
-      alt: "İstanbul personel servisi hizmet bölgeleri",
+      alt: "İstanbul ve Kocaeli personel servisi hizmet bölgeleri",
     }],
   },
 };
@@ -103,6 +103,21 @@ const asiaClusters: RegionCluster[] = [
   },
 ];
 
+const kocaeliClusters: RegionCluster[] = [
+  {
+    title: "Dilovası ve DOSB",
+    text: "Metal ve kimya sanayinin yoğun olduğu bölgede vardiya çakışmaları ve sahil yolu trafiği birlikte değerlendirilir.",
+    tags: ["Dilovası", "DOSB", "Diliskelesi"],
+    href: "/hizmet-bolgeleri/dilovasi-personel-servisi",
+  },
+  {
+    title: "Gebze ve GOSB",
+    text: "Geniş sanayi ve lojistik aksında TEM otoyolu bağlantısı ile tesis yönü aynı rota tablosunda birlikte planlanır.",
+    tags: ["Gebze", "GOSB", "Çayırova OSB"],
+    href: "/hizmet-bolgeleri/gebze-personel-servisi",
+  },
+];
+
 const faqs = [
   {
     question: "İstanbul’un hangi bölgelerinde personel servisi planlanabilir?",
@@ -168,8 +183,8 @@ export default function ServiceRegionsPage() {
       {
         "@type": "Service",
         "@id": `${canonical}#service`,
-        name: "İstanbul Personel Servisi Hizmet Bölgeleri",
-        serviceType: "İstanbul kurumsal personel servisi bölge ve güzergâh planlama",
+        name: "İstanbul ve Kocaeli Personel Servisi Hizmet Bölgeleri",
+        serviceType: "İstanbul ve Kocaeli kurumsal personel servisi bölge ve güzergâh planlama",
         url: canonical,
         provider: {
           "@type": "Organization",
@@ -178,8 +193,11 @@ export default function ServiceRegionsPage() {
           telephone: siteContact.phoneE164,
           email: siteContact.email,
         },
-        areaServed: { "@type": "City", name: "İstanbul" },
-        description: "Avrupa ve Anadolu Yakası için personel dağılımı, tesis yönü, vardiya, durak ve güzergâh odaklı kurumsal servis planlama yaklaşımı.",
+        areaServed: [
+          { "@type": "City", name: "İstanbul" },
+          { "@type": "AdministrativeArea", name: "Kocaeli" },
+        ],
+        description: "Avrupa Yakası, Anadolu Yakası ve Kocaeli için personel dağılımı, tesis yönü, vardiya, durak ve güzergâh odaklı kurumsal servis planlama yaklaşımı.",
       },
       {
         "@type": "FAQPage",
@@ -207,20 +225,22 @@ export default function ServiceRegionsPage() {
               <nav className={styles.breadcrumbs} aria-label="İçerik yolu">
                 <Link href="/">Ana Sayfa</Link><span>/</span><span>Hizmet Bölgeleri</span>
               </nav>
-              <span className={styles.eyebrow}>Avrupa Yakası · Anadolu Yakası</span>
-              <h1 id="regions-title">İstanbul Personel Servisi <span>Hizmet Bölgeleri</span></h1>
+              <span className={styles.eyebrow}>Avrupa Yakası · Anadolu Yakası · Kocaeli</span>
+              <h1 id="regions-title">İstanbul ve Kocaeli Personel Servisi <span>Hizmet Bölgeleri</span></h1>
               <p>
-                <strong>İstanbul personel servisi</strong> planında ilçe adı başlangıç noktasıdır;
-                gerçek kararı personel dağılımı, tesis yönü, vardiya saati ve güvenli duraklar
-                verir. Bölge mimarisini bu dört veriyi birlikte ele alacak şekilde kuruyoruz.
+                <strong>İstanbul ve Kocaeli personel servisi</strong> planında ilçe adı başlangıç
+                noktasıdır; gerçek kararı personel dağılımı, tesis yönü, vardiya saati ve güvenli
+                duraklar verir. Bölge mimarisini bu dört veriyi birlikte ele alacak şekilde
+                kuruyoruz.
               </p>
               <div className={styles.heroActions}>
                 <Link href="/iletisim">Bölgenizi paylaşın <ArrowIcon /></Link>
-                <Link href="/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi">Avrupa Yakası sayfası</Link>
+                <Link href="/hizmet-bolgeleri/kocaeli-personel-servisi">Kocaeli sayfası</Link>
               </div>
               <div className={styles.keywordRow}>
                 <strong>Avrupa Yakası personel servisi</strong>
                 <strong>Anadolu Yakası personel servisi</strong>
+                <strong>Kocaeli personel servisi</strong>
               </div>
             </div>
             <div className={styles.mosaic} aria-label="İstanbul personel servisi operasyon görselleri">
@@ -279,6 +299,19 @@ export default function ServiceRegionsPage() {
           </div>
         </section>
 
+        <section className={styles.regionSection} id="kocaeli" aria-labelledby="kocaeli-title">
+          <div className={styles.container}>
+            <div className={styles.sectionHeading}>
+              <div><span>03 · Kocaeli</span><h2 id="kocaeli-title">İstanbul sınırının doğusunda ayrı bir sanayi disiplini.</h2></div>
+              <p><strong>Kocaeli personel servisi</strong> hatlarında DOSB, GOSB gibi büyük organize sanayi bölgelerinin vardiya yoğunluğu ve TEM/sahil yolu bağlantıları birlikte değerlendirilir.</p>
+            </div>
+            <Link className={styles.regionOverviewLink} href="/hizmet-bolgeleri/kocaeli-personel-servisi">
+              Kocaeli personel servisi sayfasını açın <ArrowIcon />
+            </Link>
+            <RegionGrid items={kocaeliClusters} />
+          </div>
+        </section>
+
         <section className={styles.structureSection} id="ilce-yapisi" aria-labelledby="structure-title">
           <div className={`${styles.container} ${styles.structureLayout}`}>
             <div>
@@ -291,6 +324,8 @@ export default function ServiceRegionsPage() {
               <Link href="/vardiyali-personel-servisi"><span>Vardiya</span><strong>Vardiyalı personel servisi</strong></Link>
               <Link href="/fabrika-personel-tasimaciligi"><span>Tesis</span><strong>Fabrika personel servisi</strong></Link>
               <Link href="/kurumsal-servis-guzergah-planlama"><span>Rota</span><strong>Güzergâh planlama</strong></Link>
+              <Link href="/vip-personel-servisi"><span>Kapasite</span><strong>Özel VIP personel servisi</strong></Link>
+              <Link href="/27-1-personel-servisi"><span>Kapasite</span><strong>27+1 personel servisi</strong></Link>
             </div>
           </div>
         </section>
