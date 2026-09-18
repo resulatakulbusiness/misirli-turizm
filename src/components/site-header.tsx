@@ -18,6 +18,8 @@ const serviceLinks: NavItem[] = [
   { label: "Kurumsal Personel Taşımacılığı", href: "/personel-tasimaciligi" },
   { label: "Vardiyalı Personel Servisi", href: "/vardiyali-personel-servisi" },
   { label: "Fabrika Personel Taşımacılığı", href: "/fabrika-personel-tasimaciligi" },
+  { label: "Özel VIP Personel Servisi", href: "/vip-personel-servisi" },
+  { label: "27+1 Personel Servisi", href: "/27-1-personel-servisi" },
   { label: "Güzergâh ve Durak Planlama", href: "/kurumsal-servis-guzergah-planlama" },
   { label: "Personel Servisi Fiyatları", href: "/personel-servisi-fiyatlari" },
 ];
@@ -27,6 +29,9 @@ const regionLinks: NavItem[] = [
   { label: "İstanbul Avrupa Yakası", href: "/hizmet-bolgeleri/istanbul-avrupa-yakasi-personel-servisi" },
   { label: "Başakşehir ve İkitelli", href: "/hizmet-bolgeleri/basaksehir-personel-servisi", indent: true },
   { label: "İstanbul Anadolu Yakası", href: "/hizmet-bolgeleri/istanbul-anadolu-yakasi-personel-servisi" },
+  { label: "Kocaeli Personel Servisi", href: "/hizmet-bolgeleri/kocaeli-personel-servisi" },
+  { label: "Dilovası", href: "/hizmet-bolgeleri/dilovasi-personel-servisi", indent: true },
+  { label: "Gebze", href: "/hizmet-bolgeleri/gebze-personel-servisi", indent: true },
 ];
 
 function MenuIcon() {
