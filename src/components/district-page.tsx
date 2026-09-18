@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import brandLogo from "../../public/brand/misirli-turizm-logo.png";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
@@ -21,6 +22,7 @@ type ZoneItem = ContentItem & {
 export type DistrictPageData = {
   slug: string;
   district: string;
+  province?: string;
   parentRegion: { name: string; href: string };
   eyebrow: string;
   title: string;
@@ -119,7 +121,7 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
         },
         areaServed: {
           "@type": "AdministrativeArea",
-          name: `${data.district}, İstanbul`,
+          name: `${data.district}, ${data.province ?? "İstanbul"}`,
         },
         audience: { "@type": "BusinessAudience", audienceType: "İşletmeler" },
         description: data.schemaDescription,
@@ -184,8 +186,11 @@ export function DistrictPage({ data }: { data: DistrictPageData }) {
 
             <figure className={styles.heroVisual}>
               <Image src={data.image} alt={data.imageAlt} priority sizes="(max-width: 960px) 92vw, 47vw" />
+              <span className={styles.brandBadge} aria-hidden="true">
+                <Image src={brandLogo} alt="" />
+              </span>
               <figcaption>
-                <span>{data.district} · İstanbul</span>
+                <span>{data.district} · {data.province ?? "İstanbul"}</span>
                 <strong>{data.imageCaption}</strong>
               </figcaption>
               <div className={styles.routeBadge} aria-hidden="true">
