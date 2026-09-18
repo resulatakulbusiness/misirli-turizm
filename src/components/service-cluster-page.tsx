@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import brandLogo from "../../public/brand/misirli-turizm-logo.png";
 import { SiteLink as Link } from "./site-link";
 import type { ReactNode } from "react";
 import { siteContact } from "@/lib/site-contact";
@@ -181,6 +182,9 @@ export function ServiceClusterPage({ data }: { data: ServiceClusterData }) {
                 priority
                 sizes="(max-width: 920px) 92vw, 48vw"
               />
+              <span className={styles.brandBadge} aria-hidden="true">
+                <Image src={brandLogo} alt="" />
+              </span>
               <figcaption>
                 <span>Mısırlı Turizm</span>
                 <strong>{data.imageCaption}</strong>
